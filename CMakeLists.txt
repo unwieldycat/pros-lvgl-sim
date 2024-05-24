@@ -13,8 +13,8 @@ file(
 )
 
 add_executable(
-	pros-lvgl-sim 
-	src/main.cpp 
+	pros-lvgl-sim
+	src/main.cpp
 	"${SIM_SOURCES}"
 )
 
@@ -25,12 +25,7 @@ set(LV_CONF_PATH "${CMAKE_CURRENT_SOURCE_DIR}/lv_conf.h" CACHE STRING "" FORCE)
 target_include_directories(pros-lvgl-sim PRIVATE simulator/include)
 
 # SDL2
-FetchContent_Declare(
-	SDL2
-	GIT_REPOSITORY https://github.com/libsdl-org/SDL
-	GIT_TAG release-2.30.3
-)
-FetchContent_MakeAvailable(SDL2)
+find_package(sdl2 CONFIG REQUIRED)
 target_link_libraries(pros-lvgl-sim PRIVATE SDL2::SDL2)
 
 # LVGL
