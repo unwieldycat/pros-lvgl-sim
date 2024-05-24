@@ -1,4 +1,4 @@
-# https://www.toptal.com/developers/gitignore?templates=cmake,c++
+# https://www.toptal.com/developers/gitignore?templates=cmake,c++,vcpkg
 
 ### C++ ###
 # Prerequisites
@@ -50,6 +50,12 @@ _deps
 ### CMake Patch ###
 # External projects
 *-prefix/
+
+### vcpkg ###
+vcpkg-manifest-install.log
+
+## Manifest Mode
+vcpkg_installed/
 
 ### Other ###
 simulator/*
