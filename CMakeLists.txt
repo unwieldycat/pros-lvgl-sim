@@ -25,8 +25,12 @@ set(LV_CONF_PATH "${CMAKE_CURRENT_SOURCE_DIR}/lv_conf.h" CACHE STRING "" FORCE)
 target_include_directories(pros-lvgl-sim PRIVATE simulator/include)
 
 # SDL2
-find_package(sdl2 CONFIG REQUIRED)
-target_link_libraries(pros-lvgl-sim PRIVATE SDL2::SDL2)
+find_package(SDL2 CONFIG REQUIRED)
+target_link_libraries(pros-lvgl-sim
+    PRIVATE
+    $<TARGET_NAME_IF_EXISTS:SDL2::SDL2main>
+    $<IF:$<TARGET_EXISTS:SDL2::SDL2>,SDL2::SDL2,SDL2::SDL2-static>
+)
 
 # LVGL
 FetchContent_Declare(
