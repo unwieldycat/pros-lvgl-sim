@@ -106,7 +106,7 @@
 #  define SDL_DOUBLE_BUFFERED 0
 
 /*Eclipse: <SDL2/SDL.h>    Visual Studio: <SDL.h>*/
-#  define SDL_INCLUDE_PATH    "sdl.h"
+#  define SDL_INCLUDE_PATH    <SDL2/SDL.h>
 
 /*Open two windows to test multi display support*/
 #  define SDL_DUAL_DISPLAY            0
