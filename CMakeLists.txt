@@ -18,10 +18,11 @@ add_executable(
 	"${SIM_SOURCES}"
 )
 
-set(LV_DRV_CONF_PATH "${CMAKE_CURRENT_SOURCE_DIR}/lv_drv_conf.h" CACHE STRING "" FORCE) # No idea if LVGL even supports setting a driver config path
-set(LV_CONF_PATH "${CMAKE_CURRENT_SOURCE_DIR}/lv_conf.h" CACHE STRING "" FORCE)
+set(LV_DRV_CONF_PATH "${CMAKE_CURRENT_SOURCE_DIR}/include/lv_drv_conf.h" CACHE STRING "" FORCE) # No idea if LVGL even supports setting a driver config path
+set(LV_CONF_PATH "${CMAKE_CURRENT_SOURCE_DIR}/include/lv_conf.h" CACHE STRING "" FORCE)
 
 # Local includes
+target_include_directories(pros-lvgl-sim PRIVATE include)
 target_include_directories(pros-lvgl-sim PRIVATE simulator/include)
 
 # SDL2
