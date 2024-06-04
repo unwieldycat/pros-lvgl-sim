@@ -8,14 +8,14 @@ set(CMAKE_CXX_STANDARD 20)
 add_compile_definitions(PROS_LVGL_SIMULATOR)
 
 file(
-	GLOB_RECURSE SIM_SOURCES CONFIGURE_DEPENDS
-	"${CMAKE_CURRENT_SOURCE_DIR}/simulator/**/*.cpp"
+	GLOB_RECURSE USER_SOURCES CONFIGURE_DEPENDS
+	"${CMAKE_CURRENT_SOURCE_DIR}/user/**/*.cpp"
 )
 
 add_executable(
 	pros-lvgl-sim
 	src/main.cpp
-	"${SIM_SOURCES}"
+	"${USER_SOURCES}"
 )
 
 set(LV_DRV_CONF_PATH "${CMAKE_CURRENT_SOURCE_DIR}/include/lv_drv_conf.h" CACHE STRING "" FORCE) # No idea if LVGL even supports setting a driver config path
@@ -28,7 +28,7 @@ target_include_directories(pros-lvgl-sim PRIVATE simulator/include)
 # SDL2
 find_package(SDL2 CONFIG REQUIRED)
 target_link_libraries(pros-lvgl-sim
-    PRIVATE
+    PUBLIC
     $<TARGET_NAME_IF_EXISTS:SDL2::SDL2main>
     $<IF:$<TARGET_EXISTS:SDL2::SDL2>,SDL2::SDL2,SDL2::SDL2-static>
 )
