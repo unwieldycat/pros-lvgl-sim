@@ -58,7 +58,6 @@ vcpkg-manifest-install.log
 vcpkg_installed/
 
 ### Other ###
-simulator/*
 build/*
 .vscode/*
 .cache/*
