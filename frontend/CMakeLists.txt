@@ -13,3 +13,6 @@ add_executable(
 add_dependencies(sim-frontend sim-library sim-user)
 
 target_include_directories(sim-frontend PRIVATE "${PROJECT_SOURCE_DIR}/include")
+
+find_package(wxWidgets CONFIG REQUIRED)
+target_link_libraries(sim-frontend PRIVATE wx::core wx::base)
