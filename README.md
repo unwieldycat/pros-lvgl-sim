@@ -34,8 +34,3 @@ You will need CMake, a CMake-supported build system, and a C/C++ compiler.
   - [ ] PROS Stubs
   - [ ] liblvgl
   - [ ] API for manipulating robot behavior
-- [ ] PROS Stubs & Simulator
-  - [ ] RTOS simulator
-  - [ ] LLEMU
-  - [ ] Competition simulator
-- [ ] LVGL 8 Simulator
