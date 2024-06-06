@@ -9,7 +9,7 @@ project(sim-library)
 
 add_library(
 	sim-library
-	src/main.cpp
+	src/pros_stubs.cpp
 )
 
 target_include_directories(sim-library PUBLIC "${PROJECT_SOURCE_DIR}/include")
