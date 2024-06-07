@@ -34,8 +34,7 @@
  */
 #define PROS_USE_LITERALS
 
-// TODO: Uncomment
-// #include "api.h"
+#include "api.h"
 
 /**
  * You should add more #includes here
