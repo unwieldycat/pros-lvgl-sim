@@ -19,5 +19,6 @@ add_library(
 )
 
 add_dependencies(sim-user sim-library)
+target_link_libraries(sim-user sim-library)
 
 target_include_directories(sim-user PUBLIC "${PROJECT_SOURCE_DIR}/include")
