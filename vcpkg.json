@@ -1,6 +1,3 @@
 {
-  "dependencies": [
-    "sdl2",
-    "wxwidgets"
-  ]
+  "dependencies": ["wxwidgets"]
 }
