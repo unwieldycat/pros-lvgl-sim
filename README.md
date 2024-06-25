@@ -1,6 +1,6 @@
 # PROS LVGL Simulator
 
-A crude PROS & LVGL simulator for testing robot GUIs without VEX hardware.
+A crude PROS LVGL simulator for testing GUIs without VEX hardware.
 
 This project takes heavy inspiration from the [discontinued LemLib simulator](https://github.com/LemLib/pros-sim), though its goals are more narrow and focused on testing GUI code rather than simulating robot physics; It is designed as a stopgap until [vexide's QEMU-based emulator](https://github.com/vexide/vex-v5-sim) is released.
 
@@ -29,7 +29,7 @@ You will need CMake, a CMake-supported build system, and a C/C++ compiler.
 
 - [ ] Frontend
   - [ ] Competition modes control
-  - [ ] Device monitor
+  - [ ] LVGL display
 - [ ] Simulator Library
   - [ ] PROS Stubs
   - [ ] liblvgl
