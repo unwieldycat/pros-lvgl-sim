@@ -7,10 +7,14 @@ add_compile_definitions(PROS_LVGL_SIMULATOR)
 
 project(sim-library)
 
+file(
+	GLOB_RECURSE SIM_SOURCES CONFIGURE_DEPENDS
+	"${PROJECT_SOURCE_DIR}/src/***.cpp"
+)
+
 add_library(
 	sim-library
-	src/pros/adi.c
-	src/pros/adi.cpp
+	"${SIM_SOURCES}"
 )
 
 target_include_directories(sim-library PUBLIC "${PROJECT_SOURCE_DIR}/include")
