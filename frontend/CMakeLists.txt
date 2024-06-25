@@ -9,6 +9,7 @@ add_executable(
 	sim-frontend
 	src/main.cpp
 	src/frame.cpp
+	src/display.cpp
 )
 
 target_link_libraries(sim-frontend PRIVATE sim-library sim-user)
