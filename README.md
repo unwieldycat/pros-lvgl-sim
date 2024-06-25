@@ -1,3 +1,6 @@
+> ![NOTE]
+> This is a work in progress and is not currently functional.
+
 # PROS LVGL Simulator
 
 A crude PROS LVGL simulator for testing GUIs without VEX hardware.
