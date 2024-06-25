@@ -21,6 +21,20 @@ void LVGLDisplay::paintNow() {
 }
 
 void LVGLDisplay::render(wxDC &dc) {
-	dc.SetBrush(*wxRED_BRUSH);
-	dc.DrawRectangle(0, 0, 480, 240);
+	// TODO: Draw stored data
+}
+
+void LVGLDisplay::lvgl_flush_cb(
+    lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p
+) {
+	int32_t x, y;
+	for (y = area->y1; y <= area->y2; y++) {
+		for (x = area->x1; x <= area->x2; x++) {
+			// TODO: Figure out what to draw to
+			// put_px(x, y, *color_p);
+			color_p++;
+		}
+	}
+
+	lv_disp_flush_ready(disp_drv);
 }
