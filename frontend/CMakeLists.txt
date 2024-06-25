@@ -10,7 +10,7 @@ add_executable(
 	src/main.cpp
 )
 
-add_dependencies(sim-frontend sim-library sim-user)
+target_link_libraries(sim-frontend PRIVATE sim-library sim-user)
 
 target_include_directories(sim-frontend PRIVATE "${PROJECT_SOURCE_DIR}/include")
 
