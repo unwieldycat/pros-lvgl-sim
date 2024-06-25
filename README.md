@@ -1,4 +1,4 @@
-> ![NOTE]
+> [!NOTE]
 > This is a work in progress and is not currently functional.
 
 # PROS LVGL Simulator
