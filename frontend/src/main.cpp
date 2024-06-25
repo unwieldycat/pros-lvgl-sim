@@ -1,4 +1,4 @@
-#include "frame.hpp"
+#include "widgets/frame.hpp"
 #include <wx/wx.h>
 
 // TODO:

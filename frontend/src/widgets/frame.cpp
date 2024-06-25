@@ -1,4 +1,4 @@
-#include "frame.hpp"
+#include "widgets/frame.hpp"
 
 // clang-format off
 wxBEGIN_EVENT_TABLE(MainFrame, wxFrame)
@@ -19,7 +19,7 @@ MainFrame::MainFrame() : wxFrame(NULL, wxID_ANY, "Simulator", wxDefaultPosition,
 	);
 	modeChoice->SetSelection(0);
 
-	display = new LVGLDisplay(panel);
+	display = new Display(panel, wxPoint(0, 0), wxSize(480, 240));
 	display->SetDoubleBuffered(true);
 }
 

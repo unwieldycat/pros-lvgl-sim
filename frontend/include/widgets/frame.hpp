@@ -6,13 +6,9 @@ class MainFrame : public wxFrame {
 	MainFrame();
 
 	wxRadioBox *modeChoice;
-	LVGLDisplay *display;
+	Display *display;
 
   private:
 	void OnExit(wxCommandEvent &event);
 	wxDECLARE_EVENT_TABLE();
-};
-
-enum {
-	BUTTON_Test = wxID_HIGHEST + 1,
 };
