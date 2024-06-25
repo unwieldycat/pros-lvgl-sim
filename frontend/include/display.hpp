@@ -13,6 +13,9 @@ class LVGLDisplay : public wxPanel {
 	wxDECLARE_EVENT_TABLE();
 
   private:
+	// TODO: Probably separate driver initialization from the display
+	// TODO: since creating multiple displays (for whatever reason) can
+	// TODO: break stuff since its initialized twice
 	static lv_disp_drv_t disp_drv;
 	static lv_disp_draw_buf_t disp_buf;
 	static lv_color_t buf1[LV_HOR_RES_MAX * 10];
