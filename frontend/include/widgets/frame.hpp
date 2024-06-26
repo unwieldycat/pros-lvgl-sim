@@ -1,3 +1,4 @@
+#pragma once
 #include "display.hpp"
 #include <wx/wx.h>
 

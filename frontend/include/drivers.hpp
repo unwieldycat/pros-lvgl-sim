@@ -1,3 +1,4 @@
+#pragma once
 #include "liblvgl/lvgl.h"
 #include "widgets/display.hpp"
 

@@ -1,3 +1,4 @@
+#pragma once
 #include <wx/image.h>
 #include <wx/wx.h>
 
