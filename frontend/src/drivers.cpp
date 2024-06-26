@@ -27,6 +27,7 @@ void flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_
 			p.Red() = (int32_t)color_p->ch.red;
 			p.Green() = (int32_t)color_p->ch.blue;
 			p.Blue() = (int32_t)color_p->ch.blue;
+			p.OffsetX(data, 1);
 		}
 
 		p = rowStart;
