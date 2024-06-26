@@ -34,6 +34,7 @@ void flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_
 		p.OffsetY(data, 1);
 	}
 
+	output->paintNow();
 	lv_disp_flush_ready(disp_drv);
 }
 
