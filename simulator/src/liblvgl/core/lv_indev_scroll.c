@@ -6,8 +6,8 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_indev.h"
-#include "lv_indev_scroll.h"
+#include "liblvgl/core/lv_indev.h"
+#include "liblvgl/core/lv_indev_scroll.h"
 
 /*********************
  *      DEFINES

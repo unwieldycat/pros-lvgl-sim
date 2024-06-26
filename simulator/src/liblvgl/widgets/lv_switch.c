@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_switch.h"
+#include "liblvgl/widgets/lv_switch.h"
 
 #if LV_USE_SWITCH != 0
 
@@ -15,7 +15,7 @@
 #include "liblvgl/misc/lv_anim.h"
 #include "liblvgl/core/lv_indev.h"
 #include "liblvgl/core/lv_disp.h"
-#include "lv_img.h"
+#include "liblvgl/widgets/lv_img.h"
 
 /*********************
  *      DEFINES

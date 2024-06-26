@@ -6,10 +6,10 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_calendar_header_arrow.h"
+#include "liblvgl/extra/widgets/calendar/lv_calendar_header_arrow.h"
 #if LV_USE_CALENDAR_HEADER_ARROW
 
-#include "lv_calendar.h"
+#include "liblvgl/extra/widgets/calendar/lv_calendar.h"
 #include "liblvgl/widgets/lv_btn.h"
 #include "liblvgl/widgets/lv_label.h"
 #include "liblvgl/extra/layouts/flex/lv_flex.h"

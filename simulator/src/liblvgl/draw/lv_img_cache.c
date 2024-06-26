@@ -7,9 +7,9 @@
  *      INCLUDES
  *********************/
 #include "liblvgl/misc/lv_assert.h"
-#include "lv_img_cache.h"
-#include "lv_img_decoder.h"
-#include "lv_draw_img.h"
+#include "liblvgl/draw/lv_img_cache.h"
+#include "liblvgl/draw/lv_img_decoder.h"
+#include "liblvgl/draw/lv_draw_img.h"
 #include "liblvgl/hal/lv_hal_tick.h"
 #include "liblvgl/misc/lv_gc.h"
 

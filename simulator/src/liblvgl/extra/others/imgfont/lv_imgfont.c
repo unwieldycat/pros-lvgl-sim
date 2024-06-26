@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_imgfont.h"
+#include "liblvgl/extra/others/imgfont/lv_imgfont.h"
 
 #if LV_USE_IMGFONT
 

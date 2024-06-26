@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_gridnav.h"
+#include "liblvgl/extra/others/gridnav/lv_gridnav.h"
 #if LV_USE_GRIDNAV
 
 #include "liblvgl/misc/lv_assert.h"

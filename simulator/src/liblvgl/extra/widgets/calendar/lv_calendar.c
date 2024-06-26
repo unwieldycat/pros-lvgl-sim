@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_calendar.h"
+#include "liblvgl/extra/widgets/calendar/lv_calendar.h"
 #include "liblvgl/lvgl.h"
 #if LV_USE_CALENDAR
 

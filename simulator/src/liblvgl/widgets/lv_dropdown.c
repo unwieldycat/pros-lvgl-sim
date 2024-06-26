@@ -7,7 +7,7 @@
  *      INCLUDES
  *********************/
 #include "liblvgl/core/lv_obj.h"
-#include "lv_dropdown.h"
+#include "liblvgl/widgets/lv_dropdown.h"
 #if LV_USE_DROPDOWN != 0
 
 #include "liblvgl/misc/lv_assert.h"

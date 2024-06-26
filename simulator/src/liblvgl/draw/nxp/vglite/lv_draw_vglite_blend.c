@@ -31,7 +31,7 @@
  *      INCLUDES
  *********************/
 
-#include "lv_draw_vglite_blend.h"
+#include "liblvgl/draw/nxp/vglite/lv_draw_vglite_blend.h"
 
 #if LV_USE_GPU_NXP_VG_LITE
 

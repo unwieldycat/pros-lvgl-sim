@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_hal_tick.h"
+#include "liblvgl/hal/lv_hal_tick.h"
 #include <stddef.h>
 
 #if LV_TICK_CUSTOM == 1

@@ -15,10 +15,10 @@ extern "C" {
  *********************/
 #include "liblvgl/lv_conf_internal.h"
 #include <stdint.h>
-#include "lv_mem.h"
-#include "lv_ll.h"
-#include "lv_timer.h"
-#include "lv_types.h"
+#include "liblvgl/misc/lv_mem.h"
+#include "liblvgl/misc/lv_ll.h"
+#include "liblvgl/misc/lv_timer.h"
+#include "liblvgl/misc/lv_types.h"
 #include "liblvgl/draw/lv_img_cache.h"
 #include "liblvgl/draw/lv_draw_mask.h"
 #include "liblvgl/core/lv_obj_pos.h"

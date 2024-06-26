@@ -13,7 +13,7 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_img_decoder.h"
+#include "liblvgl/draw/lv_img_decoder.h"
 
 /*********************
  *      DEFINES

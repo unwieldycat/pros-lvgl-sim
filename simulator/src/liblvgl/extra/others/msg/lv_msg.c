@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_msg.h"
+#include "liblvgl/extra/others/msg/lv_msg.h"
 #if LV_USE_MSG
 
 #include "liblvgl/misc/lv_assert.h"

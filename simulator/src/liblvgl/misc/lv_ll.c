@@ -7,8 +7,8 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_ll.h"
-#include "lv_mem.h"
+#include "liblvgl/misc/lv_ll.h"
+#include "liblvgl/misc/lv_mem.h"
 
 /*********************
  *      DEFINES

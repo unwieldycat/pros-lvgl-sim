@@ -16,10 +16,10 @@
 #include "liblvgl/lv_draw_label.h"
 #include "liblvgl/misc/lv_utils.h"
 
-#include "lv_draw_sdl_utils.h"
-#include "lv_draw_sdl_texture_cache.h"
-#include "lv_draw_sdl_composite.h"
-#include "lv_draw_sdl_layer.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_utils.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_texture_cache.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_composite.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_layer.h"
 
 /*********************
  *      DEFINES

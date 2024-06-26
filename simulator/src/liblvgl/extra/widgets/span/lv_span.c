@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_span.h"
+#include "liblvgl/extra/widgets/span/lv_span.h"
 
 #if LV_USE_SPAN != 0
 

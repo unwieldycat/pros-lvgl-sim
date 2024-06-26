@@ -17,10 +17,10 @@ extern "C" {
 
 #include <stdbool.h>
 #include <stdarg.h>
-#include "lv_area.h"
+#include "liblvgl/misc/lv_area.h"
 #include "liblvgl/font/lv_font.h"
-#include "lv_printf.h"
-#include "lv_types.h"
+#include "liblvgl/misc/lv_printf.h"
+#include "liblvgl/misc/lv_types.h"
 
 /*********************
  *      DEFINES

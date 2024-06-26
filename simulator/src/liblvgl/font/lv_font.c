@@ -7,7 +7,7 @@
  *      INCLUDES
  *********************/
 
-#include "lv_font.h"
+#include "liblvgl/font/lv_font.h"
 #include "liblvgl/misc/lv_utils.h"
 #include "liblvgl/misc/lv_log.h"
 #include "liblvgl/misc/lv_assert.h"

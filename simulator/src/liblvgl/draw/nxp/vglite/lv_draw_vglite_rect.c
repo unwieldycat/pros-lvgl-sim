@@ -31,7 +31,7 @@
  *      INCLUDES
  *********************/
 
-#include "lv_draw_vglite_rect.h"
+#include "liblvgl/draw/nxp/vglite/lv_draw_vglite_rect.h"
 
 #if LV_USE_GPU_NXP_VG_LITE
 

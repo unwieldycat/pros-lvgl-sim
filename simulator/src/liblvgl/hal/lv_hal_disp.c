@@ -10,7 +10,7 @@
  *********************/
 #include <stdint.h>
 #include <stddef.h>
-#include "lv_hal.h"
+#include "liblvgl/hal/lv_hal.h"
 #include "liblvgl/misc/lv_mem.h"
 #include "liblvgl/misc/lv_gc.h"
 #include "liblvgl/misc/lv_assert.h"

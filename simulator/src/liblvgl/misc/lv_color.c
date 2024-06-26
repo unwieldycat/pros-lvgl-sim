@@ -6,8 +6,8 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_color.h"
-#include "lv_log.h"
+#include "liblvgl/misc/lv_color.h"
+#include "liblvgl/misc/lv_log.h"
 
 /*********************
  *      DEFINES

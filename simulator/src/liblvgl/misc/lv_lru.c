@@ -8,11 +8,11 @@
  *      INCLUDES
  *********************/
 
-#include "lv_lru.h"
-#include "lv_math.h"
-#include "lv_mem.h"
-#include "lv_assert.h"
-#include "lv_log.h"
+#include "liblvgl/misc/lv_lru.h"
+#include "liblvgl/misc/lv_math.h"
+#include "liblvgl/misc/lv_mem.h"
+#include "liblvgl/misc/lv_assert.h"
+#include "liblvgl/misc/lv_log.h"
 
 /*********************
  *      DEFINES

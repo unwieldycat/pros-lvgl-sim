@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_msgbox.h"
+#include "liblvgl/extra/widgets/msgbox/lv_msgbox.h"
 #if LV_USE_MSGBOX
 
 #include "liblvgl/misc/lv_assert.h"

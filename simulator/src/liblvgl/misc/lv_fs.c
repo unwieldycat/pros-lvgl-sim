@@ -6,12 +6,12 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_fs.h"
+#include "liblvgl/misc/lv_fs.h"
 
 #include "liblvgl/misc/lv_assert.h"
-#include "lv_ll.h"
+#include "liblvgl/misc/lv_ll.h"
 #include <string.h>
-#include "lv_gc.h"
+#include "liblvgl/misc/lv_gc.h"
 
 /*********************
  *      DEFINES

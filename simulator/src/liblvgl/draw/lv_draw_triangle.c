@@ -6,8 +6,8 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_draw.h"
-#include "lv_draw_triangle.h"
+#include "liblvgl/draw/lv_draw.h"
+#include "liblvgl/draw/lv_draw_triangle.h"
 #include "liblvgl/misc/lv_math.h"
 #include "liblvgl/misc/lv_mem.h"
 

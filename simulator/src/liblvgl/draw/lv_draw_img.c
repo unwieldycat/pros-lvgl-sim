@@ -6,8 +6,8 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_draw_img.h"
-#include "lv_img_cache.h"
+#include "liblvgl/draw/lv_draw_img.h"
+#include "liblvgl/draw/lv_img_cache.h"
 #include "liblvgl/hal/lv_hal_disp.h"
 #include "liblvgl/misc/lv_log.h"
 #include "liblvgl/core/lv_refr.h"

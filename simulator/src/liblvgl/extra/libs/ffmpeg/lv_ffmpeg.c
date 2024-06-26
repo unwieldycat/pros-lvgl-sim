@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_ffmpeg.h"
+#include "liblvgl/extra/libs/ffmpeg/lv_ffmpeg.h"
 #if LV_USE_FFMPEG != 0
 
 #include <libavcodec/avcodec.h>

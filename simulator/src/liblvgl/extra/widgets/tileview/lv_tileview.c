@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_tileview.h"
+#include "liblvgl/extra/widgets/tileview/lv_tileview.h"
 #include "liblvgl/core/lv_indev.h"
 #if LV_USE_TILEVIEW
 

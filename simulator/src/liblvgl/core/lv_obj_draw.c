@@ -6,10 +6,10 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_obj_draw.h"
-#include "lv_obj.h"
-#include "lv_disp.h"
-#include "lv_indev.h"
+#include "liblvgl/core/lv_obj_draw.h"
+#include "liblvgl/core/lv_obj.h"
+#include "liblvgl/core/lv_disp.h"
+#include "liblvgl/core/lv_indev.h"
 
 /*********************
  *      DEFINES

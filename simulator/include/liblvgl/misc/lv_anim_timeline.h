@@ -13,7 +13,7 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_anim.h"
+#include "liblvgl/misc/lv_anim.h"
 
 /*********************
  *      DEFINES

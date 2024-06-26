@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_spinbox.h"
+#include "liblvgl/extra/widgets/spinbox/lv_spinbox.h"
 #if LV_USE_SPINBOX
 
 #include "liblvgl/misc/lv_assert.h"

@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_math.h"
+#include "liblvgl/misc/lv_math.h"
 
 /*********************
  *      DEFINES

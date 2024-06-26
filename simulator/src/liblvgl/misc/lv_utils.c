@@ -8,7 +8,7 @@
  *********************/
 #include <stddef.h>
 
-#include "lv_utils.h"
+#include "liblvgl/misc/lv_utils.h"
 
 /*********************
  *      DEFINES

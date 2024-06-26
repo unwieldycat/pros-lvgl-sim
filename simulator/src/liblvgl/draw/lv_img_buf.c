@@ -8,8 +8,8 @@
  *********************/
 #include <stddef.h>
 #include <string.h>
-#include "lv_img_buf.h"
-#include "lv_draw_img.h"
+#include "liblvgl/draw/lv_img_buf.h"
+#include "liblvgl/draw/lv_draw_img.h"
 #include "liblvgl/misc/lv_math.h"
 #include "liblvgl/misc/lv_log.h"
 #include "liblvgl/misc/lv_mem.h"

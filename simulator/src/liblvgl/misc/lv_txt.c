@@ -7,12 +7,12 @@
  *      INCLUDES
  *********************/
 #include <stdarg.h>
-#include "lv_txt.h"
-#include "lv_txt_ap.h"
-#include "lv_math.h"
-#include "lv_log.h"
-#include "lv_mem.h"
-#include "lv_assert.h"
+#include "liblvgl/misc/lv_txt.h"
+#include "liblvgl/misc/lv_txt_ap.h"
+#include "liblvgl/misc/lv_math.h"
+#include "liblvgl/misc/lv_log.h"
+#include "liblvgl/misc/lv_mem.h"
+#include "liblvgl/misc/lv_assert.h"
 
 /*********************
  *      DEFINES

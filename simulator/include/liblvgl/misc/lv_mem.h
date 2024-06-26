@@ -19,7 +19,7 @@ extern "C" {
 #include <stddef.h>
 #include <string.h>
 
-#include "lv_types.h"
+#include "liblvgl/misc/lv_types.h"
 
 /*********************
  *      DEFINES

@@ -13,7 +13,7 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_draw_sw_blend.h"
+#include "liblvgl/draw/sw/lv_draw_sw_blend.h"
 #include "liblvgl/draw/lv_draw.h"
 #include "liblvgl/misc/lv_area.h"
 #include "liblvgl/misc/lv_color.h"

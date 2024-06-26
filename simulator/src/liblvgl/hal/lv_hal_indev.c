@@ -13,7 +13,7 @@
 #include "liblvgl/core/lv_indev.h"
 #include "liblvgl/misc/lv_mem.h"
 #include "liblvgl/misc/lv_gc.h"
-#include "lv_hal_disp.h"
+#include "liblvgl/hal/lv_hal_disp.h"
 
 /*********************
  *      DEFINES

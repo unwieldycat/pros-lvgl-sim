@@ -7,7 +7,7 @@
  *      INCLUDES
  *********************/
 
-#include "lv_fragment.h"
+#include "liblvgl/extra/others/fragment/lv_fragment.h"
 
 #if LV_USE_FRAGMENT
 

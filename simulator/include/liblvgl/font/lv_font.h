@@ -18,7 +18,7 @@ extern "C" {
 #include <stddef.h>
 #include <stdbool.h>
 
-#include "lv_symbol_def.h"
+#include "liblvgl/font/lv_symbol_def.h"
 #include "liblvgl/misc/lv_area.h"
 
 /*********************

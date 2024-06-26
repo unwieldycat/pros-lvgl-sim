@@ -6,8 +6,8 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_draw.h"
-#include "lv_draw_label.h"
+#include "liblvgl/draw/lv_draw.h"
+#include "liblvgl/draw/lv_draw_label.h"
 #include "liblvgl/misc/lv_math.h"
 #include "liblvgl/hal/lv_hal_disp.h"
 #include "liblvgl/core/lv_refr.h"

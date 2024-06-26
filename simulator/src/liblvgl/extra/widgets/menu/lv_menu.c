@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_menu.h"
+#include "liblvgl/extra/widgets/menu/lv_menu.h"
 
 #if LV_USE_MENU
 

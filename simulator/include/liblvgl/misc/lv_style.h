@@ -16,13 +16,13 @@ extern "C" {
 #include <stdbool.h>
 #include <stdint.h>
 #include "liblvgl/font/lv_font.h"
-#include "lv_color.h"
-#include "lv_area.h"
-#include "lv_anim.h"
-#include "lv_txt.h"
-#include "lv_types.h"
-#include "lv_assert.h"
-#include "lv_bidi.h"
+#include "liblvgl/misc/lv_color.h"
+#include "liblvgl/misc/lv_area.h"
+#include "liblvgl/misc/lv_anim.h"
+#include "liblvgl/misc/lv_txt.h"
+#include "liblvgl/misc/lv_types.h"
+#include "liblvgl/misc/lv_assert.h"
+#include "liblvgl/misc/lv_bidi.h"
 
 /*********************
  *      DEFINES
@@ -518,7 +518,7 @@ uint8_t _lv_style_get_prop_group(lv_style_prop_t prop);
  */
 uint8_t _lv_style_prop_lookup_flags(lv_style_prop_t prop);
 
-#include "lv_style_gen.h"
+#include "liblvgl/misc/lv_style_gen.h"
 
 static inline void lv_style_set_size(lv_style_t * style, lv_coord_t value)
 {

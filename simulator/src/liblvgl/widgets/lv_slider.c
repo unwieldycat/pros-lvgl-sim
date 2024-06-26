@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_slider.h"
+#include "liblvgl/widgets/lv_slider.h"
 #if LV_USE_SLIDER != 0
 
 #include "liblvgl/misc/lv_assert.h"
@@ -15,7 +15,7 @@
 #include "liblvgl/draw/lv_draw.h"
 #include "liblvgl/misc/lv_math.h"
 #include "liblvgl/core/lv_disp.h"
-#include "lv_img.h"
+#include "liblvgl/widgets/lv_img.h"
 
 /*********************
  *      DEFINES

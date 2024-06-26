@@ -61,7 +61,7 @@ extern "C" {
 #include <stdarg.h>
 #include <stddef.h>
 
-#include "lv_types.h"
+#include "liblvgl/misc/lv_types.h"
 
 typedef struct {
     const char * fmt;

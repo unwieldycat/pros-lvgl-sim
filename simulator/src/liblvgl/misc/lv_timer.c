@@ -5,12 +5,12 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_timer.h"
+#include "liblvgl/misc/lv_timer.h"
 #include "liblvgl/hal/lv_hal_tick.h"
-#include "lv_assert.h"
-#include "lv_mem.h"
-#include "lv_ll.h"
-#include "lv_gc.h"
+#include "liblvgl/misc/lv_assert.h"
+#include "liblvgl/misc/lv_mem.h"
+#include "liblvgl/misc/lv_ll.h"
+#include "liblvgl/misc/lv_gc.h"
 
 /*********************
  *      DEFINES

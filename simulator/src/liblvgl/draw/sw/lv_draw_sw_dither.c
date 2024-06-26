@@ -6,8 +6,8 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_draw_sw_dither.h"
-#include "lv_draw_sw_gradient.h"
+#include "liblvgl/draw/sw/lv_draw_sw_dither.h"
+#include "liblvgl/draw/sw/lv_draw_sw_gradient.h"
 #include "liblvgl/misc/lv_color.h"
 
 /**********************

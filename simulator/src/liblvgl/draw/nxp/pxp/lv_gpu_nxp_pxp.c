@@ -31,10 +31,10 @@
  *      INCLUDES
  *********************/
 
-#include "lv_gpu_nxp_pxp.h"
+#include "liblvgl/draw/nxp/pxp/lv_gpu_nxp_pxp.h"
 
 #if LV_USE_GPU_NXP_PXP
-#include "lv_gpu_nxp_pxp_osa.h"
+#include "liblvgl/draw/nxp/pxp/lv_gpu_nxp_pxp_osa.h"
 #include "liblvgl/core/lv_refr.h"
 
 /*********************

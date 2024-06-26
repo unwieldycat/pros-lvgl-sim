@@ -16,7 +16,7 @@ extern "C" {
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "lv_font.h"
+#include "liblvgl/font/lv_font.h"
 
 /*********************
  *      DEFINES

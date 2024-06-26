@@ -13,7 +13,7 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_draw_rect.h"
+#include "liblvgl/draw/lv_draw_rect.h"
 
 /*********************
  *      DEFINES

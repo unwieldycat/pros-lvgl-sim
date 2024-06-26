@@ -7,7 +7,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_keyboard.h"
+#include "liblvgl/extra/widgets/keyboard/lv_keyboard.h"
 #if LV_USE_KEYBOARD
 
 #include "liblvgl/widgets/lv_textarea.h"

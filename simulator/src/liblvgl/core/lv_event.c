@@ -6,8 +6,8 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_obj.h"
-#include "lv_indev.h"
+#include "liblvgl/core/lv_obj.h"
+#include "liblvgl/core/lv_indev.h"
 
 /*********************
  *      DEFINES

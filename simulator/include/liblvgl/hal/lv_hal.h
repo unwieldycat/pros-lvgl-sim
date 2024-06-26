@@ -13,9 +13,9 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_hal_disp.h"
-#include "lv_hal_indev.h"
-#include "lv_hal_tick.h"
+#include "liblvgl/hal/lv_hal_disp.h"
+#include "liblvgl/hal/lv_hal_indev.h"
+#include "liblvgl/hal/lv_hal_tick.h"
 
 /*********************
  *      DEFINES

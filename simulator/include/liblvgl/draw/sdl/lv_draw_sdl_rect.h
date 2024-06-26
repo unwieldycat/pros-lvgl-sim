@@ -22,7 +22,7 @@ extern "C" {
 
 #include "../lv_draw.h"
 
-#include "lv_draw_sdl_texture_cache.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_texture_cache.h"
 
 /*********************
  *      DEFINES

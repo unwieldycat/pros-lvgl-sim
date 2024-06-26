@@ -16,7 +16,7 @@ extern "C" {
 
 #include "liblvgl/lv_conf_internal.h"
 
-#include "lv_types.h"
+#include "liblvgl/misc/lv_types.h"
 
 #include <stdint.h>
 #include <stddef.h>

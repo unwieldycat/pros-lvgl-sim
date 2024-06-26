@@ -6,9 +6,9 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_obj.h"
-#include "lv_disp.h"
-#include "lv_refr.h"
+#include "liblvgl/core/lv_obj.h"
+#include "liblvgl/core/lv_disp.h"
+#include "liblvgl/core/lv_refr.h"
 #include "liblvgl/misc/lv_gc.h"
 
 /*********************

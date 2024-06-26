@@ -8,7 +8,7 @@
  *********************/
 #include <stddef.h>
 
-#include "lv_group.h"
+#include "liblvgl/core/lv_group.h"
 #include "liblvgl/misc/lv_gc.h"
 #include "liblvgl/core/lv_obj.h"
 #include "liblvgl/core/lv_indev.h"

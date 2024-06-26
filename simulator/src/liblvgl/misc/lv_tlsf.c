@@ -2,10 +2,10 @@
 #if LV_MEM_CUSTOM == 0
 
 #include <limits.h>
-#include "lv_tlsf.h"
-#include "lv_mem.h"
-#include "lv_log.h"
-#include "lv_assert.h"
+#include "liblvgl/misc/lv_tlsf.h"
+#include "liblvgl/misc/lv_mem.h"
+#include "liblvgl/misc/lv_log.h"
+#include "liblvgl/misc/lv_assert.h"
 
 #undef  printf
 #define printf LV_LOG_ERROR

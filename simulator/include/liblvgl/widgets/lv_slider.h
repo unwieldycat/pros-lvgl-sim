@@ -23,7 +23,7 @@ extern "C" {
 #endif
 
 #include "liblvgl/core/lv_obj.h"
-#include "lv_bar.h"
+#include "liblvgl/widgets/lv_bar.h"
 
 /*********************
  *      DEFINES

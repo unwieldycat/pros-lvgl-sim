@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_gpu_swm341_dma2d.h"
+#include "liblvgl/draw/swm341_dma2d/lv_gpu_swm341_dma2d.h"
 #include "liblvgl/core/lv_refr.h"
 
 #if LV_USE_GPU_SWM341_DMA2D

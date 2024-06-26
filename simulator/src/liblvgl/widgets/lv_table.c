@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_table.h"
+#include "liblvgl/widgets/lv_table.h"
 #if LV_USE_TABLE != 0
 
 #include "liblvgl/core/lv_indev.h"

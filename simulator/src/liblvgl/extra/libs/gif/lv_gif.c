@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_gif.h"
+#include "liblvgl/extra/libs/gif/lv_gif.h"
 #if LV_USE_GIF
 
 #include "gifdec.h"

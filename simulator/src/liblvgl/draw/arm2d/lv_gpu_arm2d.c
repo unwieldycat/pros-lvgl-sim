@@ -35,7 +35,7 @@
 #endif
 
 
-#include "lv_gpu_arm2d.h"
+#include "liblvgl/draw/arm2d/lv_gpu_arm2d.h"
 #include "liblvgl/core/lv_refr.h"
 
 #if LV_USE_GPU_ARM2D

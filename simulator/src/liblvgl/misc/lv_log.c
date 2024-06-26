@@ -6,12 +6,12 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_log.h"
+#include "liblvgl/misc/lv_log.h"
 #if LV_USE_LOG
 
 #include <stdarg.h>
 #include <string.h>
-#include "lv_printf.h"
+#include "liblvgl/misc/lv_printf.h"
 #include "liblvgl/hal/lv_hal_tick.h"
 
 #if LV_LOG_PRINTF

@@ -12,7 +12,7 @@
 
 #include "liblvgl/lvgl.h"
 #include "liblvgl/misc/lv_fs.h"
-#include "lv_font_loader.h"
+#include "liblvgl/font/lv_font_loader.h"
 
 /**********************
  *      TYPEDEFS

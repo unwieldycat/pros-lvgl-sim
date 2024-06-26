@@ -31,7 +31,7 @@
  *      INCLUDES
  *********************/
 
-#include "lv_gpu_nxp.h"
+#include "liblvgl/draw/nxp/lv_gpu_nxp.h"
 
 #if LV_USE_GPU_NXP_PXP || LV_USE_GPU_NXP_VG_LITE
 

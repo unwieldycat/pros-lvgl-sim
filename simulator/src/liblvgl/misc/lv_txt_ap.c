@@ -7,10 +7,10 @@
  *      INCLUDES
  *********************/
 #include <stddef.h>
-#include "lv_bidi.h"
-#include "lv_txt.h"
-#include "lv_txt_ap.h"
-#include "lv_mem.h"
+#include "liblvgl/misc/lv_bidi.h"
+#include "liblvgl/misc/lv_txt.h"
+#include "liblvgl/misc/lv_txt_ap.h"
+#include "liblvgl/misc/lv_mem.h"
 #include "liblvgl/draw/lv_draw.h"
 
 /*********************

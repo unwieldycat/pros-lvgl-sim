@@ -134,14 +134,14 @@ typedef enum {
     LV_OBJ_DRAW_PART_SCROLLBAR,  /**< The scrollbar*/
 } lv_obj_draw_part_type_t;
 
-#include "lv_obj_tree.h"
-#include "lv_obj_pos.h"
-#include "lv_obj_scroll.h"
-#include "lv_obj_style.h"
-#include "lv_obj_draw.h"
-#include "lv_obj_class.h"
-#include "lv_event.h"
-#include "lv_group.h"
+#include "liblvgl/core/lv_obj_tree.h"
+#include "liblvgl/core/lv_obj_pos.h"
+#include "liblvgl/core/lv_obj_scroll.h"
+#include "liblvgl/core/lv_obj_style.h"
+#include "liblvgl/core/lv_obj_draw.h"
+#include "liblvgl/core/lv_obj_class.h"
+#include "liblvgl/core/lv_event.h"
+#include "liblvgl/core/lv_group.h"
 
 /**
  * Make the base object's class publicly available.

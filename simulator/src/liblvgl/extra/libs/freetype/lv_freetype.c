@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_freetype.h"
+#include "liblvgl/extra/libs/freetype/lv_freetype.h"
 #if LV_USE_FREETYPE
 
 #include "ft2build.h"

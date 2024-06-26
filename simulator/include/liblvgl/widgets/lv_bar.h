@@ -19,8 +19,8 @@ extern "C" {
 
 #include "liblvgl/core/lv_obj.h"
 #include "liblvgl/misc/lv_anim.h"
-#include "lv_btn.h"
-#include "lv_label.h"
+#include "liblvgl/widgets/lv_btn.h"
+#include "liblvgl/widgets/lv_label.h"
 
 /*********************
  *      DEFINES

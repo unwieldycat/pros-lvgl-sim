@@ -14,9 +14,9 @@ extern "C" {
  *      INCLUDES
  *********************/
 #include "liblvgl/lv_conf_internal.h"
-#include "lv_assert.h"
-#include "lv_math.h"
-#include "lv_types.h"
+#include "liblvgl/misc/lv_assert.h"
+#include "liblvgl/misc/lv_math.h"
+#include "liblvgl/misc/lv_types.h"
 
 /*Error checking*/
 #if LV_COLOR_DEPTH == 24

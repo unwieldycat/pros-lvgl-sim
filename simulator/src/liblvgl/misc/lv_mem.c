@@ -7,11 +7,11 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_mem.h"
-#include "lv_tlsf.h"
-#include "lv_gc.h"
-#include "lv_assert.h"
-#include "lv_log.h"
+#include "liblvgl/misc/lv_mem.h"
+#include "liblvgl/misc/lv_tlsf.h"
+#include "liblvgl/misc/lv_gc.h"
+#include "liblvgl/misc/lv_assert.h"
+#include "liblvgl/misc/lv_log.h"
 
 #if LV_MEM_CUSTOM != 0
     #include LV_MEM_CUSTOM_INCLUDE

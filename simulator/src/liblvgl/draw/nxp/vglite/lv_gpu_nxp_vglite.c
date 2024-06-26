@@ -31,12 +31,12 @@
  *      INCLUDES
  *********************/
 
-#include "lv_gpu_nxp_vglite.h"
+#include "liblvgl/draw/nxp/vglite/lv_gpu_nxp_vglite.h"
 
 #if LV_USE_GPU_NXP_VG_LITE
 #include "liblvgl/core/lv_refr.h"
 #if BLIT_DBG_AREAS
-    #include "lv_draw_vglite_blend.h"
+    #include "liblvgl/draw/nxp/vglite/lv_draw_vglite_blend.h"
 #endif
 
 /*********************

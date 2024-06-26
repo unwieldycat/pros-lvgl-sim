@@ -200,7 +200,7 @@ lv_state_t lv_obj_style_get_selector_state(lv_style_selector_t selector);
 
 lv_part_t lv_obj_style_get_selector_part(lv_style_selector_t selector);
 
-#include "lv_obj_style_gen.h"
+#include "liblvgl/core/lv_obj_style_gen.h"
 
 static inline void lv_obj_set_style_pad_all(struct _lv_obj_t * obj, lv_coord_t value, lv_style_selector_t selector)
 {

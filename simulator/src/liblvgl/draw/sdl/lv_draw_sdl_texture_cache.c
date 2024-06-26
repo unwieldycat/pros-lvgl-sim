@@ -11,9 +11,9 @@
 
 #if LV_USE_GPU_SDL
 
-#include "lv_draw_sdl_texture_cache.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_texture_cache.h"
 
-#include "lv_draw_sdl_utils.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_utils.h"
 
 /*********************
  *      DEFINES

@@ -7,7 +7,7 @@
  *      INCLUDES
  *********************/
 
-#include "lv_imgbtn.h"
+#include "liblvgl/extra/widgets/imgbtn/lv_imgbtn.h"
 
 #if LV_USE_IMGBTN != 0
 

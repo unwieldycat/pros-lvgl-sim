@@ -6,10 +6,10 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_calendar_header_dropdown.h"
+#include "liblvgl/extra/widgets/calendar/lv_calendar_header_dropdown.h"
 #if LV_USE_CALENDAR_HEADER_DROPDOWN
 
-#include "lv_calendar.h"
+#include "liblvgl/extra/widgets/calendar/lv_calendar.h"
 #include "liblvgl/widgets/lv_dropdown.h"
 #include "liblvgl/extra/layouts/flex/lv_flex.h"
 

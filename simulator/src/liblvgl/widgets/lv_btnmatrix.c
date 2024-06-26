@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_btnmatrix.h"
+#include "liblvgl/widgets/lv_btnmatrix.h"
 #if LV_USE_BTNMATRIX != 0
 
 #include "liblvgl/misc/lv_assert.h"

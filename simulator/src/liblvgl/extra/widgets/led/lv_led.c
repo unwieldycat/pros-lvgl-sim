@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_led.h"
+#include "liblvgl/extra/widgets/led/lv_led.h"
 #if LV_USE_LED
 
 #include "liblvgl/misc/lv_assert.h"

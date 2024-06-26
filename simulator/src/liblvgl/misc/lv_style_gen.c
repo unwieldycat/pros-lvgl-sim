@@ -1,4 +1,4 @@
-#include "lv_style.h"
+#include "liblvgl/misc/lv_style.h"
 
 void lv_style_set_width(lv_style_t * style, lv_coord_t value)
 {

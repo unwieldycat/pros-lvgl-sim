@@ -31,7 +31,7 @@
  *      INCLUDES
  *********************/
 
-#include "lv_draw_pxp_blend.h"
+#include "liblvgl/draw/nxp/pxp/lv_draw_pxp_blend.h"
 
 #if LV_USE_GPU_NXP_PXP
 

@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_canvas.h"
+#include "liblvgl/widgets/lv_canvas.h"
 #include "liblvgl/misc/lv_assert.h"
 #include "liblvgl/misc/lv_math.h"
 #include "liblvgl/draw/lv_draw.h"

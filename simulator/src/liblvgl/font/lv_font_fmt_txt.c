@@ -6,8 +6,8 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_font.h"
-#include "lv_font_fmt_txt.h"
+#include "liblvgl/font/lv_font.h"
+#include "liblvgl/font/lv_font_fmt_txt.h"
 #include "liblvgl/misc/lv_assert.h"
 #include "liblvgl/misc/lv_types.h"
 #include "liblvgl/misc/lv_gc.h"

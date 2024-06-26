@@ -7,7 +7,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_colorwheel.h"
+#include "liblvgl/extra/widgets/colorwheel/lv_colorwheel.h"
 #if LV_USE_COLORWHEEL
 
 #include "liblvgl/misc/lv_assert.h"

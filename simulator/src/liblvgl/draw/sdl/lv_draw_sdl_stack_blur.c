@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_draw_sdl_stack_blur.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_stack_blur.h"
 
 #if LV_USE_GPU_SDL
 /*********************

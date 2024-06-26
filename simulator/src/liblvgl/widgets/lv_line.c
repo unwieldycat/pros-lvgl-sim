@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_line.h"
+#include "liblvgl/widgets/lv_line.h"
 
 #if LV_USE_LINE != 0
 #include "liblvgl/misc/lv_assert.h"

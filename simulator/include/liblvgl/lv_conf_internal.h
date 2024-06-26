@@ -12,7 +12,7 @@
 
 /* Handle special Kconfig options */
 #ifndef LV_KCONFIG_IGNORE
-    #include "lv_conf_kconfig.h"
+    #include "liblvgl/lv_conf_kconfig.h"
     #ifdef CONFIG_LV_CONF_SKIP
         #define LV_CONF_SKIP
     #endif
@@ -36,7 +36,7 @@
         #undef __LV_TO_STR_AUX
         #undef __LV_TO_STR
     #elif defined(LV_CONF_INCLUDE_SIMPLE)         /*Or simply include lv_conf.h is enabled*/
-        #include "lv_conf.h"
+        #include "liblvgl/lv_conf.h"
     #else
         #include "../../lv_conf.h"                /*Else assume lv_conf.h is next to the lvgl folder*/
     #endif

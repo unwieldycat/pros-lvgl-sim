@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_arc.h"
+#include "liblvgl/widgets/lv_arc.h"
 #if LV_USE_ARC != 0
 
 #include "liblvgl/core/lv_group.h"

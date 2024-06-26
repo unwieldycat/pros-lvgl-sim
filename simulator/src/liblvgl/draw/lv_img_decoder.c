@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_img_decoder.h"
+#include "liblvgl/draw/lv_img_decoder.h"
 #include "liblvgl/misc/lv_assert.h"
 #include "liblvgl/draw/lv_draw_img.h"
 #include "liblvgl/misc/lv_ll.h"

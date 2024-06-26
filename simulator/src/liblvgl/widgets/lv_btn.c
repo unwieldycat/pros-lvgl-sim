@@ -7,7 +7,7 @@
  *      INCLUDES
  *********************/
 
-#include "lv_btn.h"
+#include "liblvgl/widgets/lv_btn.h"
 #if LV_USE_BTN != 0
 
 #include "liblvgl/extra/layouts/flex/lv_flex.h"

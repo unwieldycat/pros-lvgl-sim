@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_img.h"
+#include "liblvgl/widgets/lv_img.h"
 #if LV_USE_IMG != 0
 
 #include "liblvgl/core/lv_disp.h"

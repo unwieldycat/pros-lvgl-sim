@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_draw_sw.h"
+#include "liblvgl/draw/sw/lv_draw_sw.h"
 #include "liblvgl/misc/lv_assert.h"
 #include "liblvgl/misc/lv_area.h"
 #include "liblvgl/core/lv_refr.h"

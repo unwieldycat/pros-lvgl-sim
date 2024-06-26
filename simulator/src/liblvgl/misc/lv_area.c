@@ -8,8 +8,8 @@
  *********************/
 #include "liblvgl/lv_conf_internal.h"
 
-#include "lv_area.h"
-#include "lv_math.h"
+#include "liblvgl/misc/lv_area.h"
+#include "liblvgl/misc/lv_math.h"
 
 /*********************
  *      DEFINES

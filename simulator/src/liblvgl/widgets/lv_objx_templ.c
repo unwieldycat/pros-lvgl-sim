@@ -15,7 +15,7 @@
 /*********************
  *      INCLUDES
  *********************/
-//#include "lv_templ.h" /*TODO uncomment this*/
+//#include "liblvgl/widgets/lv_templ.h" /*TODO uncomment this*/
 
 #if defined(LV_USE_TEMPL) && LV_USE_TEMPL != 0
 

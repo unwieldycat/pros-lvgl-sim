@@ -7,8 +7,8 @@
  *      INCLUDES
  *********************/
 #include <stddef.h>
-#include "lv_refr.h"
-#include "lv_disp.h"
+#include "liblvgl/core/lv_refr.h"
+#include "liblvgl/core/lv_disp.h"
 #include "liblvgl/hal/lv_hal_tick.h"
 #include "liblvgl/hal/lv_hal_disp.h"
 #include "liblvgl/misc/lv_timer.h"

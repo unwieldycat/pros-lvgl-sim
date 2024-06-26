@@ -9,7 +9,7 @@
 #include "liblvgl/lvgl.h"
 #if LV_USE_PNG
 
-#include "lv_png.h"
+#include "liblvgl/extra/libs/png/lv_png.h"
 #include "lodepng.h"
 #include <stdlib.h>
 

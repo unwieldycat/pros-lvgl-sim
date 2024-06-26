@@ -17,7 +17,7 @@ extern "C" {
  *********************/
 #include <stdint.h>
 #include <stdbool.h>
-#include "lv_hal.h"
+#include "liblvgl/hal/lv_hal.h"
 #include "liblvgl/draw/lv_draw.h"
 #include "liblvgl/misc/lv_color.h"
 #include "liblvgl/misc/lv_area.h"

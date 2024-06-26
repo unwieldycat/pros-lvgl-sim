@@ -10,7 +10,7 @@
 
 #if LV_USE_THEME_MONO
 
-#include "lv_theme_mono.h"
+#include "liblvgl/extra/themes/mono/lv_theme_mono.h"
 #include "liblvgl/misc/lv_gc.h"
 
 /*********************

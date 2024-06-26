@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_qrcode.h"
+#include "liblvgl/extra/libs/qrcode/lv_qrcode.h"
 #if LV_USE_QRCODE
 
 #include "qrcodegen.h"

@@ -6,12 +6,12 @@
 /*********************
  *      INCLUDES
  ********************/
-#include "lv_indev.h"
-#include "lv_disp.h"
-#include "lv_obj.h"
-#include "lv_indev_scroll.h"
-#include "lv_group.h"
-#include "lv_refr.h"
+#include "liblvgl/core/lv_indev.h"
+#include "liblvgl/core/lv_disp.h"
+#include "liblvgl/core/lv_obj.h"
+#include "liblvgl/core/lv_indev_scroll.h"
+#include "liblvgl/core/lv_group.h"
+#include "liblvgl/core/lv_refr.h"
 
 #include "liblvgl/hal/lv_hal_tick.h"
 #include "liblvgl/misc/lv_timer.h"

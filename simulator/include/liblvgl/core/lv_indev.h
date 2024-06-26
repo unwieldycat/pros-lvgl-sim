@@ -13,9 +13,9 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_obj.h"
+#include "liblvgl/core/lv_obj.h"
 #include "liblvgl/hal/lv_hal_indev.h"
-#include "lv_group.h"
+#include "liblvgl/core/lv_group.h"
 
 /*********************
  *      DEFINES

@@ -11,8 +11,8 @@
 #if LV_USE_GPU_SDL
 
 #include "liblvgl/misc/lv_gc.h"
-#include "lv_draw_sdl_mask.h"
-#include "lv_draw_sdl_utils.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_mask.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_utils.h"
 
 /*********************
  *      DEFINES

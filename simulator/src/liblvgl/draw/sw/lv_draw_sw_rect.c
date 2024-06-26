@@ -6,12 +6,12 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_draw_sw.h"
+#include "liblvgl/draw/sw/lv_draw_sw.h"
 #include "liblvgl/misc/lv_math.h"
 #include "liblvgl/misc/lv_txt_ap.h"
 #include "liblvgl/core/lv_refr.h"
 #include "liblvgl/misc/lv_assert.h"
-#include "lv_draw_sw_dither.h"
+#include "liblvgl/draw/sw/lv_draw_sw_dither.h"
 
 /*********************
  *      DEFINES

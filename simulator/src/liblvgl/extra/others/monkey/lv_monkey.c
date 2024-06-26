@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_monkey.h"
+#include "liblvgl/extra/others/monkey/lv_monkey.h"
 
 #if LV_USE_MONKEY != 0
 

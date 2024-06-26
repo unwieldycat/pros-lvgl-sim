@@ -12,11 +12,11 @@
 
 #include "liblvgl/core/lv_refr.h"
 
-#include "lv_draw_sdl.h"
-#include "lv_draw_sdl_priv.h"
-#include "lv_draw_sdl_composite.h"
-#include "lv_draw_sdl_utils.h"
-#include "lv_draw_sdl_layer.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_priv.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_composite.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_utils.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl_layer.h"
 
 /*********************
  *      DEFINES

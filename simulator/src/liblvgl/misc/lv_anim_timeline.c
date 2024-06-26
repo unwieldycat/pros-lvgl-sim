@@ -6,9 +6,9 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_anim_timeline.h"
-#include "lv_mem.h"
-#include "lv_assert.h"
+#include "liblvgl/misc/lv_anim_timeline.h"
+#include "liblvgl/misc/lv_mem.h"
+#include "liblvgl/misc/lv_assert.h"
 
 /*********************
  *      DEFINES

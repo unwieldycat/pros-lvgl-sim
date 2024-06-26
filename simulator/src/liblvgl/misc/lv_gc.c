@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_gc.h"
+#include "liblvgl/misc/lv_gc.h"
 
 /*********************
  *      DEFINES

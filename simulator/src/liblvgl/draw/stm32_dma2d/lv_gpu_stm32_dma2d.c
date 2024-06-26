@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_gpu_stm32_dma2d.h"
+#include "liblvgl/draw/stm32_dma2d/lv_gpu_stm32_dma2d.h"
 #include "liblvgl/core/lv_refr.h"
 
 #if LV_USE_GPU_STM32_DMA2D

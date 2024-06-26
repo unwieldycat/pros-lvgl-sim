@@ -6,11 +6,11 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_style.h"
+#include "liblvgl/misc/lv_style.h"
 #include "liblvgl/misc/lv_gc.h"
 #include "liblvgl/misc/lv_mem.h"
-#include "lv_assert.h"
-#include "lv_types.h"
+#include "liblvgl/misc/lv_assert.h"
+#include "liblvgl/misc/lv_types.h"
 
 /*********************
  *      DEFINES

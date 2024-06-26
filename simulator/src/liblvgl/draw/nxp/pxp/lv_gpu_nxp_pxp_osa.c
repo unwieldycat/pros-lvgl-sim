@@ -31,7 +31,7 @@
  *      INCLUDES
  *********************/
 
-#include "lv_gpu_nxp_pxp_osa.h"
+#include "liblvgl/draw/nxp/pxp/lv_gpu_nxp_pxp_osa.h"
 
 #if LV_USE_GPU_NXP_PXP && LV_USE_GPU_NXP_PXP_AUTO_INIT
 #include "liblvgl/misc/lv_log.h"

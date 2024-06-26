@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_label.h"
+#include "liblvgl/widgets/lv_label.h"
 #if LV_USE_LABEL != 0
 #include "liblvgl/core/lv_obj.h"
 #include "liblvgl/misc/lv_assert.h"

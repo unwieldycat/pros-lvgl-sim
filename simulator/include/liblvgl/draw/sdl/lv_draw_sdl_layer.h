@@ -13,7 +13,7 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_draw_sdl.h"
+#include "liblvgl/draw/sdl/lv_draw_sdl.h"
 
 /*********************
  *      DEFINES

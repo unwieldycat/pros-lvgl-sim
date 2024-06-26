@@ -10,7 +10,7 @@
 
 #if LV_USE_THEME_DEFAULT
 
-#include "lv_theme_default.h"
+#include "liblvgl/extra/themes/default/lv_theme_default.h"
 #include "liblvgl/misc/lv_gc.h"
 
 /*********************

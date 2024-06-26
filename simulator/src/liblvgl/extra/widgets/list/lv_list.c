@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_list.h"
+#include "liblvgl/extra/widgets/list/lv_list.h"
 #include "liblvgl/core/lv_disp.h"
 #include "liblvgl/widgets/lv_label.h"
 #include "liblvgl/widgets/lv_img.h"

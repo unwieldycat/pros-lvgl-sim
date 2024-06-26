@@ -6,8 +6,8 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_draw.h"
-#include "lv_draw_arc.h"
+#include "liblvgl/draw/lv_draw.h"
+#include "liblvgl/draw/lv_draw_arc.h"
 
 /*********************
  *      DEFINES

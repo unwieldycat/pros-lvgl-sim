@@ -6,8 +6,8 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_obj.h"
-#include "lv_theme.h"
+#include "liblvgl/core/lv_obj.h"
+#include "liblvgl/core/lv_theme.h"
 
 /*********************
  *      DEFINES

@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_checkbox.h"
+#include "liblvgl/widgets/lv_checkbox.h"
 #if LV_USE_CHECKBOX != 0
 
 #include "liblvgl/misc/lv_assert.h"

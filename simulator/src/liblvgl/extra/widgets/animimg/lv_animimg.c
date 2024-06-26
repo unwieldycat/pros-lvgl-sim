@@ -6,7 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_animimg.h"
+#include "liblvgl/extra/widgets/animimg/lv_animimg.h"
 #if LV_USE_ANIMIMG != 0
 
 /*Testing of dependencies*/
