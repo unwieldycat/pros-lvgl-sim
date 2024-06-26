@@ -61,3 +61,4 @@ vcpkg_installed/
 build/*
 .vscode/*
 .cache/*
+**/__pycache__/
