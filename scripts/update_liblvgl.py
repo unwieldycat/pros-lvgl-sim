@@ -64,12 +64,20 @@ def fix_includes(file_path):
         elif parent_dir.is_relative_to("include/"):
             parent_dir = parent_dir.relative_to("include/")
 
-        new_include = parent_dir.joinpath(include_path).as_posix()
-        return f'#include "{new_include}"'
+        new_include = parent_dir.joinpath(include_path)
+        full_new_inc = Path("simulator/include").joinpath(new_include)
+        if full_new_inc.exists():
+            return f'#include "{new_include.as_posix()}"'
+        else:
+            print(f"File {full_new_inc} doesn't exist! Skipping include...")
+            return f'#include "{include_path}"'
 
     with open(file_path, "r", encoding="utf-8") as file:
         data = file.read()
-        data = re.sub(r'#include "(lv_.*\.h)"', resolve_rel_include, data)
+        data = re.sub(r'#include "(\w*\.h)"', resolve_rel_include, data)
+        data = data.replace(
+            '#include "sw/lv_draw_sw.h"', '#include "liblvgl/draw/sw/lv_draw_sw.h"'
+        )
 
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(data)
