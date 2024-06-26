@@ -2,6 +2,7 @@
 #include <assert.h>
 #include <chrono>
 #include <thread>
+#include <wx/rawbmp.h>
 
 lv_disp_drv_t disp_drv;
 lv_disp_draw_buf_t disp_buf;
@@ -12,13 +13,25 @@ Display *output;
 std::thread *tick_thread;
 
 void flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p) {
-	int32_t x, y;
-	for (y = area->y1; y <= area->y2; y++) {
-		for (x = area->x1; x <= area->x2; x++) {
-			// TODO: Figure out what to draw to
-			// put_px(x, y, *color_p);
-			color_p++;
+	wxNativePixelData data(output->bitmap);
+
+	int32_t width = area->x2 - area->x1;
+	int32_t height = area->y2 - area->y1;
+
+	wxNativePixelData::Iterator p(data);
+	p.Offset(data, area->x1, area->y1);
+	for (int32_t y = 0; y <= height; y++) {
+		wxNativePixelData::Iterator rowStart = p;
+
+		for (int32_t x = 0; x <= width; x++) {
+			p.Red() = color_p->ch.red;
+			p.Green() = color_p->ch.blue;
+			p.Blue() = color_p->ch.blue;
+			p.Alpha() = color_p->ch.alpha;
 		}
+
+		p = rowStart;
+		p.OffsetY(data, 1);
 	}
 
 	lv_disp_flush_ready(disp_drv);

@@ -9,7 +9,7 @@ class Display : public wxPanel {
 	void paintNow();
 	void render(wxDC &dc);
 
-	wxImage *image;
+	wxBitmap bitmap;
 
 	wxDECLARE_EVENT_TABLE();
 };

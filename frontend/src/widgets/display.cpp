@@ -8,7 +8,7 @@ wxEND_EVENT_TABLE();
 
 Display::Display(wxWindow *parent, wxPoint pos, wxSize size)
     : wxPanel(parent, wxID_ANY, pos, size) {
-	image = new wxImage(size);
+	bitmap = wxBitmap(480, 240, 32);
 }
 
 void Display::paintEvent(wxPaintEvent &evt) {
@@ -21,4 +21,4 @@ void Display::paintNow() {
 	render(dc);
 }
 
-void Display::render(wxDC &dc) {}
+void Display::render(wxDC &dc) { dc.DrawBitmap(bitmap, wxPoint(0, 0)); }
