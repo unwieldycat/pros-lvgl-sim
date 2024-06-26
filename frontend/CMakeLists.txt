@@ -8,8 +8,9 @@ project(sim-frontend)
 add_executable(
 	sim-frontend
 	src/main.cpp
-	src/frame.cpp
-	src/display.cpp
+	src/drivers.cpp
+	src/widgets/frame.cpp
+	src/widgets/display.cpp
 )
 
 target_link_libraries(sim-frontend PRIVATE sim-library sim-user)
