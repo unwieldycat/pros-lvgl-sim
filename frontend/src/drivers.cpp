@@ -24,10 +24,9 @@ void flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_
 		wxNativePixelData::Iterator rowStart = p;
 
 		for (int32_t x = 0; x <= width; x++) {
-			p.Red() = color_p->ch.red;
-			p.Green() = color_p->ch.blue;
-			p.Blue() = color_p->ch.blue;
-			p.Alpha() = color_p->ch.alpha;
+			p.Red() = (int32_t)color_p->ch.red;
+			p.Green() = (int32_t)color_p->ch.blue;
+			p.Blue() = (int32_t)color_p->ch.blue;
 		}
 
 		p = rowStart;
