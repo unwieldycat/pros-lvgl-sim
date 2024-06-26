@@ -24,7 +24,7 @@
 /                     Some performance improvement.
 /----------------------------------------------------------------------------*/
 
-#include "tjpgd.h"
+#include "liblvgl/extra/libs/sjpg/tjpgd.h"
 #if LV_USE_SJPG
 
 #if JD_FASTDECODE == 2

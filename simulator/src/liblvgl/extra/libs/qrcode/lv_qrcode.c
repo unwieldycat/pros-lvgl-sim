@@ -9,7 +9,7 @@
 #include "liblvgl/extra/libs/qrcode/lv_qrcode.h"
 #if LV_USE_QRCODE
 
-#include "qrcodegen.h"
+#include "liblvgl/extra/libs/qrcode/qrcodegen.h"
 
 /*********************
  *      DEFINES

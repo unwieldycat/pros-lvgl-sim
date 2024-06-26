@@ -48,7 +48,7 @@
 #include "liblvgl/lvgl.h"
 #if LV_USE_SJPG
 
-#include "tjpgd.h"
+#include "liblvgl/extra/libs/sjpg/tjpgd.h"
 #include "liblvgl/extra/libs/sjpg/lv_sjpg.h"
 #include "liblvgl/misc/lv_fs.h"
 

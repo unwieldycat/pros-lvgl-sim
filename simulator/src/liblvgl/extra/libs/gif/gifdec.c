@@ -1,4 +1,4 @@
-#include "gifdec.h"
+#include "liblvgl/extra/libs/gif/gifdec.h"
 #include "liblvgl/misc/lv_log.h"
 #include "liblvgl/misc/lv_mem.h"
 #include "liblvgl/misc/lv_color.h"

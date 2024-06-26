@@ -17,7 +17,7 @@ extern "C" {
 #include "liblvgl/lvgl.h"
 #if LV_USE_GIF
 
-#include "gifdec.h"
+#include "liblvgl/extra/libs/gif/gifdec.h"
 
 /*********************
  *      DEFINES

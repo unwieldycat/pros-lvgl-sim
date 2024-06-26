@@ -11,7 +11,7 @@ extern "C" {
 #include "liblvgl/lv_conf_internal.h"
 #if LV_USE_SJPG
 
-#include "tjpgdcnf.h"
+#include "liblvgl/extra/libs/sjpg/tjpgdcnf.h"
 #include <string.h>
 #include <stdint.h>
 
