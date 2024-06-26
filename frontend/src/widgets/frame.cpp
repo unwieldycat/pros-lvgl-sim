@@ -1,4 +1,6 @@
 #include "widgets/frame.hpp"
+#include "drivers.hpp"
+#include "main.h"
 
 // clang-format off
 wxBEGIN_EVENT_TABLE(MainFrame, wxFrame)
@@ -20,7 +22,7 @@ MainFrame::MainFrame() : wxFrame(NULL, wxID_ANY, "Simulator", wxDefaultPosition,
 	modeChoice->SetSelection(0);
 
 	display = new Display(panel, wxPoint(0, 0), wxSize(480, 240));
-	display->SetDoubleBuffered(true);
+	disp_init(display);
 }
 
 void MainFrame::OnExit(wxCommandEvent &event) { Close(true); }
