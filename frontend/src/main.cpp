@@ -2,7 +2,6 @@
 #include <wx/wx.h>
 
 // TODO:
-// - Separate widgets from other logic
 // - Create virtual competition switch
 // - Create simulated touch driver
 // - Fix LVGL
