@@ -90,6 +90,7 @@ def main():
     shutil.rmtree("simulator/include/liblvgl/", ignore_errors=True)
     shutil.copytree("liblvgl/src/liblvgl", "simulator/src/liblvgl")
     shutil.copytree("liblvgl/include/liblvgl", "simulator/include/liblvgl")
+    Path("simulator/src/liblvgl/display.c").unlink(True)
 
     step("Fix relative includes")
     for path in Path("simulator/src/liblvgl").rglob("**/*.c"):
