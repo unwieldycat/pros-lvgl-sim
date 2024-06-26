@@ -99,6 +99,9 @@ def main():
     for path in Path("simulator/include/liblvgl").rglob("**/*.h"):
         fix_includes(path)
 
+    step("Remove liblvgl")
+    shutil.rmtree("liblvgl", onexc=onexc_chmod)
+
     step("Success")
 
 
