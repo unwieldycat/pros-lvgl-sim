@@ -1,7 +1,6 @@
 #include "drivers.hpp"
 #include <assert.h>
-#include <chrono>
-#include <thread>
+#include <time.h>
 #include <wx/rawbmp.h>
 
 lv_disp_drv_t disp_drv;
@@ -9,8 +8,6 @@ lv_disp_draw_buf_t disp_buf;
 lv_color_t buf1[LV_HOR_RES_MAX * 10];
 lv_color_t buf2[LV_HOR_RES_MAX * 10];
 Display *output;
-
-std::thread *tick_thread;
 
 void flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p) {
 	wxNativePixelData data(output->bitmap);
@@ -38,14 +35,15 @@ void flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_
 	lv_disp_flush_ready(disp_drv);
 }
 
-void tick() {
-	using namespace std::chrono_literals;
+TickTimer::TickTimer() : wxTimer() { prev_time = clock(); }
 
-	while (true) {
-		std::this_thread::sleep_for(2ms);
-		lv_tick_inc(2);
-		lv_task_handler();
-	}
+void TickTimer::start() { wxTimer::Start(5); }
+
+void TickTimer::Notify() {
+	int now = clock();
+	lv_tick_inc(now - prev_time);
+	prev_time = now;
+	lv_task_handler();
 }
 
 void disp_init(Display *display) {
@@ -66,7 +64,4 @@ void disp_init(Display *display) {
 	lv_obj_t *scr = lv_obj_create(NULL);
 	lv_obj_set_size(scr, LV_HOR_RES_MAX, LV_VER_RES_MAX);
 	lv_scr_load(scr);
-
-	// LVGL tick handler
-	tick_thread = new std::thread(&tick);
 }

@@ -23,6 +23,9 @@ MainFrame::MainFrame() : wxFrame(NULL, wxID_ANY, "Simulator", wxDefaultPosition,
 
 	display = new Display(panel, wxPoint(0, 0), wxSize(480, 240));
 	disp_init(display);
+
+	TickTimer *tick = new TickTimer();
+	tick->start();
 }
 
 void MainFrame::OnExit(wxCommandEvent &event) { Close(true); }
