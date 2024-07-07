@@ -23,13 +23,13 @@ MainFrame::MainFrame() : wxFrame(NULL, wxID_ANY, "Simulator", wxDefaultPosition,
 	TaskTimer *task = new TaskTimer();
 	task->start();
 
-	modeChoice = new ModeSelector(panel, wxPoint(10, 240), wxDefaultSize);
-
 	UserRunner *init_runner = new UserRunner([] {
 		initialize();
 		competition_initialize();
 	});
 	init_runner->start();
+
+	modeChoice = new ModeSelector(panel, wxPoint(10, 240), wxDefaultSize);
 }
 
 void MainFrame::OnExit(wxCommandEvent &event) { Close(true); }
