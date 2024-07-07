@@ -4,20 +4,26 @@
 #include <wx/wx.h>
 
 class LVGLDisplay : public wxPanel {
-  public:
-	LVGLDisplay(wxWindow *parent, wxPoint pos, wxSize size);
+  private:
+	lv_disp_drv_t disp_drv;
+	lv_disp_draw_buf_t disp_buf;
+	lv_color_t buf1[LV_HOR_RES_MAX * 10];
+	lv_color_t buf2[LV_HOR_RES_MAX * 10];
+	wxBitmap bitmap;
 
 	void paintEvent(wxPaintEvent &evt);
 	void paintNow();
 	void render(wxDC &dc);
 
-	void flush(const lv_area_t *area, lv_color_t *color_p);
-	lv_disp_drv_t disp_drv;
-	lv_disp_draw_buf_t disp_buf;
-	lv_color_t buf1[LV_HOR_RES_MAX * 10];
-	lv_color_t buf2[LV_HOR_RES_MAX * 10];
+	static void input_cb(lv_indev_drv_t *indev_drv, lv_indev_data_t *data);
+	void input(lv_indev_data_t *data);
+	void input_event(wxMouseEvent &event);
 
-	wxBitmap bitmap;
+	static void flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p);
+	void flush(const lv_area_t *area, lv_color_t *color_p);
+
+  public:
+	LVGLDisplay(wxWindow *parent, wxPoint pos, wxSize size);
 
 	wxDECLARE_EVENT_TABLE();
 };
