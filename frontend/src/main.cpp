@@ -2,9 +2,7 @@
 #include <wx/wx.h>
 
 // TODO:
-// - Create virtual competition switch
 // - Create simulated touch driver
-// - Fix LVGL
 
 class App : public wxApp {
   public:
