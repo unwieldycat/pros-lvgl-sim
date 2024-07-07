@@ -1,4 +1,5 @@
 #pragma once
+#include "liblvgl/lvgl.h"
 #include <wx/image.h>
 #include <wx/wx.h>
 
@@ -9,6 +10,12 @@ class Display : public wxPanel {
 	void paintEvent(wxPaintEvent &evt);
 	void paintNow();
 	void render(wxDC &dc);
+
+	void flush(const lv_area_t *area, lv_color_t *color_p);
+	lv_disp_drv_t disp_drv;
+	lv_disp_draw_buf_t disp_buf;
+	lv_color_t buf1[LV_HOR_RES_MAX * 10];
+	lv_color_t buf2[LV_HOR_RES_MAX * 10];
 
 	wxBitmap bitmap;
 
