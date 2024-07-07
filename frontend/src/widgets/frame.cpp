@@ -14,8 +14,6 @@ wxEND_EVENT_TABLE();
 MainFrame::MainFrame() : wxFrame(NULL, wxID_ANY, "Simulator", wxDefaultPosition, wxSize(480, 320)) {
 	wxPanel *panel = new wxPanel(this);
 
-	modeChoice = new ModeSelector(panel, wxPoint(10, 240), wxDefaultSize);
-
 	display = new Display(panel, wxPoint(0, 0), wxSize(480, 240));
 	disp_init(display);
 
@@ -24,6 +22,14 @@ MainFrame::MainFrame() : wxFrame(NULL, wxID_ANY, "Simulator", wxDefaultPosition,
 
 	TaskTimer *task = new TaskTimer();
 	task->start();
+
+	modeChoice = new ModeSelector(panel, wxPoint(10, 240), wxDefaultSize);
+
+	UserRunner *init_runner = new UserRunner([] {
+		initialize();
+		competition_initialize();
+	});
+	init_runner->start();
 }
 
 void MainFrame::OnExit(wxCommandEvent &event) { Close(true); }
