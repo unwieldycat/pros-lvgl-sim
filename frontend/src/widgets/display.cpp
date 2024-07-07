@@ -103,6 +103,9 @@ void LVGLDisplay::input_event(wxMouseEvent &event) {
 	wxPoint mouse_pos = wxGetMousePosition();
 	mouse_x = mouse_pos.x - this->GetScreenPosition().x;
 	mouse_y = mouse_pos.y - this->GetScreenPosition().y;
+
+	if (mouse_x < 0) mouse_x = 0;
+	if (mouse_y < 0) mouse_y = 0;
 }
 
 void LVGLDisplay::paintEvent(wxPaintEvent &evt) {
