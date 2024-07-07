@@ -19,7 +19,7 @@ MainFrame::MainFrame() : wxFrame(NULL, wxID_ANY, "Simulator", wxDefaultPosition,
 	tick->start();
 
 	// Create LVGL display
-	display = new Display(panel, wxPoint(0, 0), wxSize(480, 240));
+	display = new LVGLDisplay(panel, wxPoint(0, 0), wxSize(480, 240));
 
 	// Run user init
 	UserRunner *init_runner = new UserRunner([] {

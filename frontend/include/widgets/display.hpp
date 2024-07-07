@@ -3,9 +3,9 @@
 #include <wx/image.h>
 #include <wx/wx.h>
 
-class Display : public wxPanel {
+class LVGLDisplay : public wxPanel {
   public:
-	Display(wxWindow *parent, wxPoint pos, wxSize size);
+	LVGLDisplay(wxWindow *parent, wxPoint pos, wxSize size);
 
 	void paintEvent(wxPaintEvent &evt);
 	void paintNow();

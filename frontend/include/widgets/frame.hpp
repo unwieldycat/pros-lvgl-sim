@@ -7,7 +7,7 @@ class MainFrame : public wxFrame {
 	MainFrame();
 
 	wxRadioBox *modeChoice;
-	Display *display;
+	LVGLDisplay *display;
 
   private:
 	void OnExit(wxCommandEvent &event);

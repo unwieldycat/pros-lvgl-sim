@@ -5,22 +5,22 @@
 #include <wx/rawbmp.h>
 
 // clang-format off
-wxBEGIN_EVENT_TABLE(Display, wxPanel)
-	EVT_PAINT(Display::paintEvent)
+wxBEGIN_EVENT_TABLE(LVGLDisplay, wxPanel)
+	EVT_PAINT(LVGLDisplay::paintEvent)
 wxEND_EVENT_TABLE();
 // clang-format on
 
 // ========================= Flush Callback Wrapper ========================= //
 
 void flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p) {
-	Display *display = static_cast<Display *>(disp_drv->user_data);
+	LVGLDisplay *display = static_cast<LVGLDisplay *>(disp_drv->user_data);
 	display->flush(area, color_p);
 	lv_disp_flush_ready(disp_drv);
 }
 
 // ========================== Display Constructor ========================== //
 
-Display::Display(wxWindow *parent, wxPoint pos, wxSize size)
+LVGLDisplay::LVGLDisplay(wxWindow *parent, wxPoint pos, wxSize size)
     : wxPanel(parent, wxID_ANY, pos, size) {
 	bitmap = wxBitmap(480, 240, 32);
 
@@ -44,7 +44,7 @@ Display::Display(wxWindow *parent, wxPoint pos, wxSize size)
 
 // ============================ Display Methods ============================ //
 
-void Display::flush(const lv_area_t *area, lv_color_t *color_p) {
+void LVGLDisplay::flush(const lv_area_t *area, lv_color_t *color_p) {
 	wxNativePixelData data(this->bitmap);
 
 	int32_t width = area->x2 - area->x1;
@@ -70,14 +70,14 @@ void Display::flush(const lv_area_t *area, lv_color_t *color_p) {
 	this->paintNow();
 }
 
-void Display::paintEvent(wxPaintEvent &evt) {
+void LVGLDisplay::paintEvent(wxPaintEvent &evt) {
 	wxPaintDC dc(this);
 	render(dc);
 }
 
-void Display::paintNow() {
+void LVGLDisplay::paintNow() {
 	wxPaintDC dc(this);
 	render(dc);
 }
 
-void Display::render(wxDC &dc) { dc.DrawBitmap(bitmap, wxPoint(0, 0)); }
+void LVGLDisplay::render(wxDC &dc) { dc.DrawBitmap(bitmap, wxPoint(0, 0)); }
