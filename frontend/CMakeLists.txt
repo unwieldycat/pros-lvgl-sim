@@ -11,6 +11,7 @@ add_executable(
 	src/drivers.cpp
 	src/widgets/frame.cpp
 	src/widgets/display.cpp
+	src/widgets/competition.cpp
 )
 
 target_link_libraries(sim-frontend PRIVATE sim-library sim-user)
