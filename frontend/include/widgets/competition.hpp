@@ -17,6 +17,7 @@ class UserRunner : public wxTimer {
 class ModeSelector : public wxRadioBox {
   public:
 	ModeSelector(wxWindow *parent, wxPoint position, wxSize size);
+	void RunComp(int selection);
 	void RunComp(wxCommandEvent &event);
 	wxArrayString GetChoices();
 };
