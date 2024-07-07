@@ -101,8 +101,8 @@ void LVGLDisplay::input(lv_indev_data_t *data) {
 void LVGLDisplay::input_event(wxMouseEvent &event) {
 	pressing = event.ButtonDown(wxMouseButton::wxMOUSE_BTN_LEFT);
 	wxPoint mouse_pos = wxGetMousePosition();
-	int mouse_x = mouse_pos.x - this->GetScreenPosition().x;
-	int mouse_y = mouse_pos.y - this->GetScreenPosition().y;
+	mouse_x = mouse_pos.x - this->GetScreenPosition().x;
+	mouse_y = mouse_pos.y - this->GetScreenPosition().y;
 }
 
 void LVGLDisplay::paintEvent(wxPaintEvent &evt) {
