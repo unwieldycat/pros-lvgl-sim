@@ -7,7 +7,6 @@
 // clang-format off
 wxBEGIN_EVENT_TABLE(MainFrame, wxFrame)
 	EVT_MENU(wxID_EXIT, MainFrame::OnExit)
-	EVT_RADIOBOX(ID_CompModeSelector, ModeSelector::RunComp)
 wxEND_EVENT_TABLE();
 // clang-format on
 

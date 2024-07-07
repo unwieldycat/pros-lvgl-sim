@@ -20,4 +20,6 @@ class ModeSelector : public wxRadioBox {
 	void RunComp(int selection);
 	void RunComp(wxCommandEvent &event);
 	wxArrayString GetChoices();
+
+	wxDECLARE_EVENT_TABLE();
 };

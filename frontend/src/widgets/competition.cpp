@@ -2,6 +2,12 @@
 #include "main.h"
 #include "widgetids.hpp"
 
+// clang-format off
+wxBEGIN_EVENT_TABLE(ModeSelector, wxRadioBox)
+	EVT_RADIOBOX(ID_CompModeSelector, ModeSelector::RunComp)
+wxEND_EVENT_TABLE();
+// clang-format on
+
 UserRunner::UserRunner(std::function<void()> func) : wxTimer() { this->func = func; }
 void UserRunner::Notify() { func(); }
 void UserRunner::start() { wxTimer::Start(10, true); }
