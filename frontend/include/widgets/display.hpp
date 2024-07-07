@@ -11,6 +11,11 @@ class LVGLDisplay : public wxPanel {
 	lv_color_t buf2[LV_HOR_RES_MAX * 10];
 	wxBitmap bitmap;
 
+	lv_indev_drv_t indev_drv;
+	bool pressing;
+	int mouse_x;
+	int mouse_y;
+
 	void paintEvent(wxPaintEvent &evt);
 	void paintNow();
 	void render(wxDC &dc);

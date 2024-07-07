@@ -2,20 +2,28 @@
 #include <assert.h>
 #include <time.h>
 #include <wx/event.h>
+#include <wx/mousestate.h>
 #include <wx/rawbmp.h>
+#include <wx/window.h>
 
 // clang-format off
 wxBEGIN_EVENT_TABLE(LVGLDisplay, wxPanel)
 	EVT_PAINT(LVGLDisplay::paintEvent)
+	EVT_MOUSE_EVENTS(LVGLDisplay::input_event)
 wxEND_EVENT_TABLE();
 // clang-format on
 
-// ========================= Flush Callback Wrapper ========================= //
+// =========================== Callback Wrappers =========================== //
 
-void flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p) {
+void LVGLDisplay::flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p) {
 	LVGLDisplay *display = static_cast<LVGLDisplay *>(disp_drv->user_data);
 	display->flush(area, color_p);
 	lv_disp_flush_ready(disp_drv);
+}
+
+void LVGLDisplay::input_cb(lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
+	LVGLDisplay *display = static_cast<LVGLDisplay *>(indev_drv->user_data);
+	display->input(data);
 }
 
 // ========================== Display Constructor ========================== //
@@ -35,6 +43,16 @@ LVGLDisplay::LVGLDisplay(wxWindow *parent, wxPoint pos, wxSize size)
 
 	lv_disp_t *disp = lv_disp_drv_register(&disp_drv);
 	assert(disp != NULL);
+
+	// Input device driver
+	lv_indev_drv_init(&indev_drv);
+	indev_drv.disp = disp;
+	indev_drv.type = LV_INDEV_TYPE_POINTER;
+	indev_drv.read_cb = input_cb;
+	indev_drv.user_data = this;
+
+	lv_indev_t *indev = lv_indev_drv_register(&indev_drv);
+	assert(indev != NULL);
 
 	// Create screen object
 	lv_obj_t *scr = lv_obj_create(NULL);
@@ -68,6 +86,23 @@ void LVGLDisplay::flush(const lv_area_t *area, lv_color_t *color_p) {
 	}
 
 	this->paintNow();
+}
+
+void LVGLDisplay::input(lv_indev_data_t *data) {
+	if (pressing)
+		data->state = LV_INDEV_STATE_PRESSED;
+	else
+		data->state = LV_INDEV_STATE_RELEASED;
+
+	data->point.x = mouse_x;
+	data->point.y = mouse_y;
+}
+
+void LVGLDisplay::input_event(wxMouseEvent &event) {
+	pressing = event.ButtonDown(wxMouseButton::wxMOUSE_BTN_LEFT);
+	wxPoint mouse_pos = wxGetMousePosition();
+	int mouse_x = mouse_pos.x - this->GetScreenPosition().x;
+	int mouse_y = mouse_pos.y - this->GetScreenPosition().y;
 }
 
 void LVGLDisplay::paintEvent(wxPaintEvent &evt) {
