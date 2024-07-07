@@ -18,3 +18,10 @@ class TickTimer : public wxTimer {
 	void Notify();
 	void start();
 };
+
+class TaskTimer : public wxTimer {
+  public:
+	TaskTimer();
+	void Notify();
+	void start();
+};

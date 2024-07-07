@@ -26,6 +26,9 @@ MainFrame::MainFrame() : wxFrame(NULL, wxID_ANY, "Simulator", wxDefaultPosition,
 
 	TickTimer *tick = new TickTimer();
 	tick->start();
+
+	TaskTimer *task = new TaskTimer();
+	task->start();
 }
 
 void MainFrame::OnExit(wxCommandEvent &event) { Close(true); }

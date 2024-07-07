@@ -43,8 +43,13 @@ void TickTimer::Notify() {
 	int now = clock();
 	lv_tick_inc(now - prev_time);
 	prev_time = now;
-	lv_task_handler();
 }
+
+TaskTimer::TaskTimer() : wxTimer() {}
+
+void TaskTimer::start() { wxTimer::Start(5); }
+
+void TaskTimer::Notify() { lv_timer_handler(); }
 
 void disp_init(Display *display) {
 	output = display;
