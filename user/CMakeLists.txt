@@ -11,6 +11,7 @@ project(sim-user)
 file(
 	GLOB_RECURSE USER_SOURCES CONFIGURE_DEPENDS
 	"${PROJECT_SOURCE_DIR}/src/***.cpp"
+	"${PROJECT_SOURCE_DIR}/src/***.c"
 )
 
 add_library(
