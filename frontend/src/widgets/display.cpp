@@ -5,6 +5,7 @@
 #include <wx/event.h>
 #include <wx/mousestate.h>
 #include <wx/rawbmp.h>
+#include <wx/utils.h>
 #include <wx/window.h>
 
 // clang-format off
@@ -100,7 +101,7 @@ void LVGLDisplay::input(lv_indev_data_t *data) {
 }
 
 void LVGLDisplay::input_event(wxMouseEvent &event) {
-	pressing = event.ButtonDown(wxMouseButton::wxMOUSE_BTN_LEFT);
+	pressing = wxGetMouseState().LeftIsDown();
 	wxPoint mouse_pos = wxGetMousePosition();
 	int new_mouse_x = mouse_pos.x - this->GetScreenPosition().x;
 	int new_mouse_y = mouse_pos.y - this->GetScreenPosition().y;
