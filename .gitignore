@@ -58,6 +58,7 @@ vcpkg-manifest-install.log
 vcpkg_installed/
 
 ### Other ###
+**/.DS_Store
 build/*
 .vscode/*
 .cache/*
