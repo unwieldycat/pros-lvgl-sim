@@ -12,9 +12,6 @@ class LVGLDisplay : public wxPanel {
 	wxBitmap bitmap;
 
 	lv_indev_drv_t indev_drv;
-	bool pressing;
-	int mouse_x;
-	int mouse_y;
 
 	void paintEvent(wxPaintEvent &evt);
 	void paintNow();
@@ -22,7 +19,6 @@ class LVGLDisplay : public wxPanel {
 
 	static void input_cb(lv_indev_drv_t *indev_drv, lv_indev_data_t *data);
 	void input(lv_indev_data_t *data);
-	void input_event(wxMouseEvent &event);
 
 	static void flush_cb(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p);
 	void flush(const lv_area_t *area, lv_color_t *color_p);

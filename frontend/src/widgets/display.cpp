@@ -11,7 +11,6 @@
 // clang-format off
 wxBEGIN_EVENT_TABLE(LVGLDisplay, wxPanel)
 	EVT_PAINT(LVGLDisplay::paintEvent)
-	EVT_MOUSE_EVENTS(LVGLDisplay::input_event)
 wxEND_EVENT_TABLE();
 // clang-format on
 
@@ -91,23 +90,17 @@ void LVGLDisplay::flush(const lv_area_t *area, lv_color_t *color_p) {
 }
 
 void LVGLDisplay::input(lv_indev_data_t *data) {
-	if (pressing)
+	if (wxGetMouseState().LeftIsDown())
 		data->state = LV_INDEV_STATE_PRESSED;
 	else
 		data->state = LV_INDEV_STATE_RELEASED;
 
-	data->point.x = mouse_x;
-	data->point.y = mouse_y;
-}
-
-void LVGLDisplay::input_event(wxMouseEvent &event) {
-	pressing = wxGetMouseState().LeftIsDown();
 	wxPoint mouse_pos = wxGetMousePosition();
-	int new_mouse_x = mouse_pos.x - this->GetScreenPosition().x;
-	int new_mouse_y = mouse_pos.y - this->GetScreenPosition().y;
+	int mouse_x = mouse_pos.x - this->GetScreenPosition().x;
+	int mouse_y = mouse_pos.y - this->GetScreenPosition().y;
 
-	if (new_mouse_x > 0 && new_mouse_x < LV_HOR_RES) mouse_x = new_mouse_x;
-	if (new_mouse_y > 0 && new_mouse_y < LV_VER_RES) mouse_y = new_mouse_y;
+	if (mouse_x > 0 && mouse_x < LV_HOR_RES) data->point.x = mouse_x;
+	if (mouse_y > 0 && mouse_y < LV_VER_RES) data->point.y = mouse_y;
 }
 
 void LVGLDisplay::paintEvent(wxPaintEvent &evt) {
