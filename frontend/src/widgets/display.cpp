@@ -1,4 +1,5 @@
 #include "widgets/display.hpp"
+#include "liblvgl/core/lv_disp.h"
 #include <assert.h>
 #include <time.h>
 #include <wx/event.h>
@@ -101,11 +102,11 @@ void LVGLDisplay::input(lv_indev_data_t *data) {
 void LVGLDisplay::input_event(wxMouseEvent &event) {
 	pressing = event.ButtonDown(wxMouseButton::wxMOUSE_BTN_LEFT);
 	wxPoint mouse_pos = wxGetMousePosition();
-	mouse_x = mouse_pos.x - this->GetScreenPosition().x;
-	mouse_y = mouse_pos.y - this->GetScreenPosition().y;
+	int new_mouse_x = mouse_pos.x - this->GetScreenPosition().x;
+	int new_mouse_y = mouse_pos.y - this->GetScreenPosition().y;
 
-	if (mouse_x < 0) mouse_x = 0;
-	if (mouse_y < 0) mouse_y = 0;
+	if (new_mouse_x > 0 && new_mouse_x < LV_HOR_RES) mouse_x = new_mouse_x;
+	if (new_mouse_y > 0 && new_mouse_y < LV_VER_RES) mouse_y = new_mouse_y;
 }
 
 void LVGLDisplay::paintEvent(wxPaintEvent &evt) {
