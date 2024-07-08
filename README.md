@@ -30,10 +30,14 @@ You will need CMake, a CMake-supported build system, and a C/C++ compiler.
 
 ## Todo
 
-- [ ] Frontend
-  - [ ] Competition modes control
-  - [ ] LVGL display
-- [ ] Simulator Library
-  - [ ] PROS Stubs
-  - [ ] liblvgl
-  - [ ] API for manipulating robot behavior
+- [x] Competition control
+- [x] liblvgl
+  - [x] Display driver
+  - [x] Touch driver
+- [ ] PROS
+  - [ ] RTOS simulator
+  - [ ] Basic display functions
+  - [ ] Virtual devices
+  - [ ] Stubs
+- [ ] Windows support
+- [ ] Better docs/tooling
