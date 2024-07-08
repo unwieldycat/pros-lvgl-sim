@@ -3,9 +3,6 @@
 #include <wx/wx.h>
 
 class TickTimer : public wxTimer {
-  private:
-	int prev_time;
-
   public:
 	TickTimer();
 	void Notify();
