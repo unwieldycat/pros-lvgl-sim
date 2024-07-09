@@ -1,9 +1,6 @@
 #include "widgets/frame.hpp"
 #include <wx/wx.h>
 
-// TODO:
-// - Create simulated touch driver
-
 class App : public wxApp {
   public:
 	virtual bool OnInit();
