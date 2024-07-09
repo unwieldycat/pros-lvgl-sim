@@ -201,8 +201,6 @@ add_library(
 	src/liblvgl/widgets/lv_switch.c
 	src/liblvgl/widgets/lv_table.c
 	src/liblvgl/widgets/lv_textarea.c
-	src/pros/adi.c
-	src/pros/adi.cpp
 )
 
 target_include_directories(sim-library PUBLIC "${PROJECT_SOURCE_DIR}/include")
