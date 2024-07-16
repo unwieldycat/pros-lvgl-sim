@@ -1,4 +1,5 @@
 #include "widgets/competition.hpp"
+#include "_sim/competition.hpp"
 #include "main.h"
 #include "widgetids.hpp"
 
@@ -27,12 +28,16 @@ void ModeSelector::RunComp(int selection) {
 
 	if (selection == 2) {
 		user_func = autonomous;
+		_sim::set_comp_mode(_sim::CompetitionMode::Autonomous);
 	} else if (selection == 1) {
 		user_func = opcontrol;
+		_sim::set_comp_mode(_sim::CompetitionMode::Driver);
 	} else if (selection == 0) {
 		user_func = disabled;
+		_sim::set_comp_mode(_sim::CompetitionMode::Disabled);
 	} else {
 		user_func = disabled;
+		_sim::set_comp_mode(_sim::CompetitionMode::Disabled);
 	}
 
 	UserRunner *func_task = new UserRunner(user_func);
