@@ -1,5 +1,5 @@
 #include "_sim/competition.hpp"
-#include "misc.hpp"
+#include "pros/misc.hpp"
 #include <inttypes.h>
 
 // ========================= Competition Functions ========================= //
