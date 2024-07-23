@@ -60,6 +60,7 @@ vcpkg_installed/
 ### Other ###
 **/.DS_Store
 build/*
+user/*
 .vscode/*
 .cache/*
 **/__pycache__/
