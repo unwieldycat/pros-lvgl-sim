@@ -1,5 +1,4 @@
 #include "widgets/frame.hpp"
-#include "main.h"
 #include "ticktimer.hpp"
 #include "widgetids.hpp"
 #include "widgets/competition.hpp"
@@ -20,13 +19,6 @@ MainFrame::MainFrame() : wxFrame(NULL, wxID_ANY, "Simulator", wxDefaultPosition,
 
 	// Create LVGL display
 	display = new LVGLDisplay(panel, wxPoint(0, 0), wxSize(480, 240));
-
-	// Run user init
-	UserRunner *init_runner = new UserRunner([] {
-		initialize();
-		competition_initialize();
-	});
-	init_runner->start();
 
 	// Create mode selector
 	modeChoice = new ModeSelector(panel, wxPoint(10, 240), wxDefaultSize);
