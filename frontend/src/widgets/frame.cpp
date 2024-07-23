@@ -12,11 +12,6 @@ wxEND_EVENT_TABLE();
 MainFrame::MainFrame() : wxFrame(NULL, wxID_ANY, "Simulator", wxDefaultPosition, wxSize(480, 320)) {
 	wxPanel *panel = new wxPanel(this);
 
-	// Start LVGL
-	lv_init();
-	TickTimer *tick = new TickTimer();
-	tick->start();
-
 	// Create LVGL display
 	display = new LVGLDisplay(panel, wxPoint(0, 0), wxSize(480, 240));
 
