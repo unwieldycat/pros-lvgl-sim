@@ -61,6 +61,7 @@ vcpkg_installed/
 **/.DS_Store
 build/*
 user/*
+!user/CMakeLists.txt
 .vscode/*
 .cache/*
 **/__pycache__/
