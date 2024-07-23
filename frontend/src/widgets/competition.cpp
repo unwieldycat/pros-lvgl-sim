@@ -1,6 +1,6 @@
 #include "widgets/competition.hpp"
 #include "_sim/competition.hpp"
-#include "main.h"
+#include "userfns.hpp"
 #include "widgetids.hpp"
 
 // clang-format off
@@ -18,7 +18,12 @@ ModeSelector::ModeSelector(wxWindow *parent, wxPoint position, wxSize size)
           parent, ID_CompModeSelector, "Competition Mode", position, size, this->GetChoices()
       ) {
 	this->SetSelection(0);
-	RunComp(0);
+	UserRunner *init_runner = new UserRunner([] {
+		initialize();
+		competition_initialize();
+	});
+	init_runner->start();
+	RunComp(this->GetSelection());
 }
 
 void ModeSelector::RunComp(wxCommandEvent &event) { ModeSelector::RunComp(event.GetSelection()); }
