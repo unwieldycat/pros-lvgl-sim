@@ -7,6 +7,10 @@ class App : public wxApp {
 	virtual bool OnInit();
 };
 
+// TODO: PROS uses __attribute__((constructor(101))) to initialize everything (including LVGL)
+// before globals and stuff. The LVGL driver should be reimplemented in a way to allow this to
+// happen, since you can't really create a wxwidget before wxwidgets starts.
+
 bool App::OnInit() {
 	lv_init();
 	TickTimer *tick = new TickTimer();
