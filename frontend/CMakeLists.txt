@@ -9,6 +9,7 @@ add_executable(
 	sim-frontend
 	src/main.cpp
 	src/ticktimer.cpp
+	src/userfns.cpp
 	src/widgets/frame.cpp
 	src/widgets/display.cpp
 	src/widgets/competition.cpp
