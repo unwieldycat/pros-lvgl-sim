@@ -113,8 +113,10 @@ int main() {
 		ImGui_ImplSDL2_NewFrame();
 		ImGui::NewFrame();
 
+		// Show windows
 		ImGui::ShowDemoWindow();
 
+		// Render window
 		ImGui::Render();
 		glViewport(0, 0, (int)io->DisplaySize.x, (int)io->DisplaySize.y);
 		glClearColor(
