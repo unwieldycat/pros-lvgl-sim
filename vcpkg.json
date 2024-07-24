@@ -1,3 +1,9 @@
 {
-  "dependencies": ["sdl2", "imgui"]
+  "dependencies": [
+    "sdl2",
+    {
+      "name": "imgui",
+      "features": ["sdl2-binding", "opengl3-binding"]
+    }
+  ]
 }
