@@ -16,7 +16,7 @@ target_link_libraries(sim-frontend PRIVATE sim-library sim-user)
 target_include_directories(sim-frontend PRIVATE "${PROJECT_SOURCE_DIR}/include")
 
 find_package(OpenGL REQUIRED)
-target_link_libraries(sim-frontend PRIVATE OpenGL)
+target_link_libraries(sim-frontend PRIVATE OpenGL::GL)
 
 find_package(SDL2 CONFIG REQUIRED)
 target_link_libraries(sim-frontend
