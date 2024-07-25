@@ -9,6 +9,7 @@ add_executable(
 	sim-frontend
 	src/main.cpp
 	src/userfns.cpp
+	src/lvgl_driver.cpp
 )
 
 target_link_libraries(sim-frontend PRIVATE sim-library sim-user)

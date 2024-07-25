@@ -1,5 +1,6 @@
 #include "imgui_impl_opengl3.h"
 #include "imgui_impl_sdl2.h"
+#include "lvgl_driver.hpp"
 #include <SDL.h>
 #include <SDL_opengl.h>
 #include <SDL_video.h>
@@ -87,6 +88,7 @@ void deinit_imgui() {
 __attribute__((constructor(101))) void init() {
 	init_sdl();
 	init_imgui();
+	init_lvgl();
 }
 
 __attribute__((destructor)) void deinit() {
@@ -115,6 +117,7 @@ int main() {
 
 		// Show windows
 		ImGui::ShowDemoWindow();
+		show_lvgl_window();
 
 		// Render window
 		ImGui::Render();
