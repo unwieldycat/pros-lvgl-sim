@@ -1,20 +1,25 @@
 // Adapted from https://github.com/Ryzee119/lvgl-sdl
 
+// FIXME: Image is slanted and has dividing lines. Behavior changes when buffer size is changed.
+
 #include "imgui.h"
 #include "liblvgl/core/lv_obj.h"
 #include "liblvgl/lvgl.h"
+#include "liblvgl/misc/lv_area.h"
 #include "main.hpp"
 #include <SDL.h>
 #include <SDL_pixels.h>
 #include <SDL_render.h>
 #include <SDL_surface.h>
 
+constexpr int32_t buffer_size = 240 * 480;
+
 SDL_Texture *texture;
 
 lv_disp_drv_t disp_drv;
 lv_disp_draw_buf_t disp_buf;
-lv_color_t buf1[240 * 480 / 10];
-lv_color_t buf2[240 * 480 / 10];
+lv_color_t buf1[buffer_size];
+lv_color_t buf2[buffer_size];
 
 void disp_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *color_p) {
 	int32_t width = area->x2 - area->x1;
@@ -40,7 +45,7 @@ void init_lvgl() {
 	lv_init();
 
 	// Display Driver
-	lv_disp_draw_buf_init(&disp_buf, buf1, buf2, 240 * 480 / 10);
+	lv_disp_draw_buf_init(&disp_buf, buf1, buf2, buffer_size);
 	lv_disp_drv_init(&disp_drv);
 	disp_drv.draw_buf = &disp_buf;
 	disp_drv.flush_cb = disp_flush;
@@ -53,8 +58,14 @@ void init_lvgl() {
 	// Create screen object
 	lv_obj_t *scr = lv_obj_create(NULL);
 	lv_obj_set_size(scr, LV_HOR_RES_MAX, LV_VER_RES_MAX);
-	lv_obj_set_style_bg_color(scr, lv_color_hex(0x00ff00), 0); // debug
 	lv_scr_load(scr);
+
+	// DEBUG
+	lv_obj_set_style_bg_color(scr, lv_color_hex(0x00ff00), 0);
+	lv_obj_t *ooo = lv_obj_create(scr);
+	lv_obj_set_size(ooo, 60, 60);
+	lv_obj_align(ooo, LV_ALIGN_CENTER, 0, 0);
+	lv_obj_set_style_bg_color(ooo, lv_color_hex(0xff0000), 0);
 }
 
 void show_lvgl_window() {
