@@ -116,7 +116,6 @@ int main() {
 		ImGui::NewFrame();
 
 		// Show windows
-		ImGui::ShowDemoWindow();
 		show_lvgl_window();
 
 		// Render window
