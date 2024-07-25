@@ -6,6 +6,7 @@
 #include "liblvgl/misc/lv_area.h"
 #include "main.hpp"
 #include <SDL.h>
+#include <SDL_mouse.h>
 #include <SDL_pixels.h>
 #include <SDL_render.h>
 #include <SDL_surface.h>
@@ -31,6 +32,20 @@ void disp_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *colo
 	SDL_UpdateTexture(texture, &rect, color_p, 480 * 4);
 
 	lv_disp_flush_ready(disp_drv);
+}
+
+void disp_touch(lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
+	int mouse_x;
+	int mouse_y;
+
+	if (SDL_GetMouseState(&mouse_x, &mouse_y) & SDL_BUTTON_LMASK)
+		data->state = LV_INDEV_STATE_PRESSED;
+	else
+		data->state = LV_INDEV_STATE_RELEASED;
+
+	// TODO:
+	// Make sure cursor is within image
+	// Adjust cursor position to be relative to image
 }
 
 void init_lvgl() {
