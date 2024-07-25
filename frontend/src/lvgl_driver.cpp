@@ -29,10 +29,6 @@ void disp_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *colo
 	rect.h = height;
 	SDL_UpdateTexture(texture, &rect, color_p, 4 * width);
 
-	// FIXME: Idk if these should be here
-	SDL_RenderCopy(renderer, texture, NULL, NULL);
-	SDL_RenderPresent(renderer);
-
 	lv_disp_flush_ready(disp_drv);
 }
 
@@ -59,7 +55,7 @@ void init_lvgl() {
 	// Create screen object
 	lv_obj_t *scr = lv_obj_create(NULL);
 	lv_obj_set_size(scr, LV_HOR_RES_MAX, LV_VER_RES_MAX);
-	lv_obj_set_style_bg_color(scr, lv_color_hex(0xff0000), 0); // debug
+	lv_obj_set_style_bg_color(scr, lv_color_hex(0x00ff00), 0); // debug
 	lv_scr_load(scr);
 }
 
