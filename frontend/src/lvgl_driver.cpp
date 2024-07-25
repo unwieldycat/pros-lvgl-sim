@@ -1,7 +1,5 @@
 // Adapted from https://github.com/Ryzee119/lvgl-sdl
 
-// FIXME: Nothing is displayed. Is ImGui expecting OpenGL texture?
-
 #include "imgui.h"
 #include "liblvgl/core/lv_obj.h"
 #include "liblvgl/lvgl.h"
