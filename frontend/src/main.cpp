@@ -1,5 +1,6 @@
 #include "imgui_impl_opengl3.h"
 #include "imgui_impl_sdl2.h"
+#include "liblvgl/lvgl.h"
 #include "lvgl_driver.hpp"
 #include <SDL.h>
 #include <SDL_opengl.h>
@@ -128,6 +129,9 @@ int main() {
 		glClear(GL_COLOR_BUFFER_BIT);
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 		SDL_GL_SwapWindow(window);
+
+		lv_tick_inc(2);
+		lv_timer_handler();
 	}
 
 	return 0;
