@@ -1,5 +1,7 @@
 // Adapted from https://github.com/Ryzee119/lvgl-sdl
 
+// FIXME: Nothing is displayed. Is ImGui expecting OpenGL texture?
+
 #include "imgui.h"
 #include "liblvgl/core/lv_obj.h"
 #include "liblvgl/lvgl.h"
@@ -56,7 +58,7 @@ void init_lvgl() {
 	// Create screen object
 	lv_obj_t *scr = lv_obj_create(NULL);
 	lv_obj_set_size(scr, LV_HOR_RES_MAX, LV_VER_RES_MAX);
-	lv_obj_set_style_bg_color(scr, lv_color_hex(0xff0000), 0);
+	lv_obj_set_style_bg_color(scr, lv_color_hex(0xff0000), 0); // debug
 	lv_scr_load(scr);
 }
 
