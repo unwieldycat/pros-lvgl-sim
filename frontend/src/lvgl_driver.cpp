@@ -11,7 +11,6 @@
 #include <SDL_render.h>
 #include <SDL_surface.h>
 
-SDL_Renderer *renderer;
 SDL_Texture *texture;
 
 lv_disp_drv_t disp_drv;
@@ -29,6 +28,8 @@ void disp_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *colo
 	rect.w = width;
 	rect.h = height;
 	SDL_UpdateTexture(texture, &rect, color_p, 4 * width);
+
+	// FIXME: Idk if these should be here
 	SDL_RenderCopy(renderer, texture, NULL, NULL);
 	SDL_RenderPresent(renderer);
 

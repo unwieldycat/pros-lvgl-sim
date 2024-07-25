@@ -3,7 +3,7 @@
     "sdl2",
     {
       "name": "imgui",
-      "features": ["sdl2-binding", "opengl3-binding"]
+      "features": ["sdl2-binding", "sdl2-renderer-binding"]
     }
   ]
 }

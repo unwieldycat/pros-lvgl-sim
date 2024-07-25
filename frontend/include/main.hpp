@@ -3,5 +3,5 @@
 #include <SDL.h>
 
 extern SDL_Window *window;
-extern SDL_GLContext gl_context;
+extern SDL_Renderer *renderer;
 extern ImGuiIO *io;
