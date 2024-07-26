@@ -8,6 +8,7 @@
 #include <imgui.h>
 #include <iostream>
 #include <string>
+#include <thread>
 
 // ================================ Globals ================================ //
 
@@ -84,6 +85,8 @@ __attribute__((destructor)) void deinit() {
 int main() {
 	bool should_exit = false;
 
+	std::thread lvgl_thread(lvgl_task);
+
 	while (!should_exit) {
 		// Handle SDL events
 		SDL_Event event;
@@ -113,9 +116,6 @@ int main() {
 		SDL_RenderClear(renderer);
 		ImGui_ImplSDLRenderer2_RenderDrawData(ImGui::GetDrawData());
 		SDL_RenderPresent(renderer);
-
-		lv_tick_inc(2);
-		lv_timer_handler();
 	}
 
 	return 0;

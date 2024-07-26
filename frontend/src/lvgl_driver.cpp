@@ -8,6 +8,8 @@
 #include <SDL_pixels.h>
 #include <SDL_render.h>
 #include <SDL_surface.h>
+#include <chrono>
+#include <thread>
 
 constexpr int32_t buffer_size = 240 * 480;
 
@@ -40,6 +42,16 @@ void disp_touch(lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
 	data->state = (clicked) ? LV_INDEV_STATE_PRESSED : LV_INDEV_STATE_RELEASED;
 	data->point.x = mouse_pos.x;
 	data->point.y = mouse_pos.y;
+}
+
+void lvgl_task() {
+	using namespace std::chrono_literals;
+
+	while (true) {
+		lv_tick_inc(2);
+		lv_timer_handler();
+		std::this_thread::sleep_for(2ms);
+	}
 }
 
 void init_lvgl() {
