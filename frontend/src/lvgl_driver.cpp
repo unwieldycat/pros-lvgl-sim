@@ -85,7 +85,7 @@ void show_lvgl_window() {
 	if (ImGui::IsItemHovered()) {
 		ImVec2 mouse_pos_abs = ImGui::GetMousePos();
 		ImVec2 screen_pos = ImGui::GetItemRectMin();
-		clicked = ImGui::IsItemClicked();
+		clicked = ImGui::IsMouseDown(ImGuiMouseButton_Left);
 		mouse_pos = ImVec2(mouse_pos_abs.x - screen_pos.x, mouse_pos_abs.y - screen_pos.y);
 	} else {
 		clicked = false;
