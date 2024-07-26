@@ -1,9 +1,7 @@
 // Adapted from https://github.com/Ryzee119/lvgl-sdl
 
 #include "imgui.h"
-#include "liblvgl/core/lv_obj.h"
 #include "liblvgl/lvgl.h"
-#include "liblvgl/misc/lv_area.h"
 #include "main.hpp"
 #include <SDL.h>
 #include <SDL_mouse.h>
@@ -14,6 +12,10 @@
 constexpr int32_t buffer_size = 240 * 480;
 
 SDL_Texture *texture;
+
+lv_indev_drv_t indev_drv;
+bool clicked;
+ImVec2 mouse_pos;
 
 lv_disp_drv_t disp_drv;
 lv_disp_draw_buf_t disp_buf;
@@ -35,17 +37,9 @@ void disp_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *colo
 }
 
 void disp_touch(lv_indev_drv_t *indev_drv, lv_indev_data_t *data) {
-	int mouse_x;
-	int mouse_y;
-
-	if (SDL_GetMouseState(&mouse_x, &mouse_y) & SDL_BUTTON_LMASK)
-		data->state = LV_INDEV_STATE_PRESSED;
-	else
-		data->state = LV_INDEV_STATE_RELEASED;
-
-	// TODO:
-	// Make sure cursor is within image
-	// Adjust cursor position to be relative to image
+	data->state = (clicked) ? LV_INDEV_STATE_PRESSED : LV_INDEV_STATE_RELEASED;
+	data->point.x = mouse_pos.x;
+	data->point.y = mouse_pos.y;
 }
 
 void init_lvgl() {
@@ -68,6 +62,15 @@ void init_lvgl() {
 	lv_disp_t *disp = lv_disp_drv_register(&disp_drv);
 	assert(disp != NULL);
 
+	// Input device driver
+	lv_indev_drv_init(&indev_drv);
+	indev_drv.disp = disp;
+	indev_drv.type = LV_INDEV_TYPE_POINTER;
+	indev_drv.read_cb = disp_touch;
+
+	lv_indev_t *indev = lv_indev_drv_register(&indev_drv);
+	assert(indev != NULL);
+
 	// Create screen object
 	lv_obj_t *scr = lv_obj_create(NULL);
 	lv_obj_set_size(scr, LV_HOR_RES_MAX, LV_VER_RES_MAX);
@@ -78,5 +81,15 @@ void show_lvgl_window() {
 	ImGui::Begin("Brain Screen", NULL, ImGuiWindowFlags_NoResize);
 	ImGui::SetWindowSize({496, 276});
 	ImGui::Image((void *)texture, {480, 240});
+
+	if (ImGui::IsItemHovered()) {
+		ImVec2 mouse_pos_abs = ImGui::GetMousePos();
+		ImVec2 screen_pos = ImGui::GetItemRectMin();
+		clicked = ImGui::IsItemClicked();
+		mouse_pos = ImVec2(mouse_pos_abs.x - screen_pos.x, mouse_pos_abs.y - screen_pos.y);
+	} else {
+		clicked = false;
+	}
+
 	ImGui::End();
 }
