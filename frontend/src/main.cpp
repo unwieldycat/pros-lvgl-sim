@@ -1,3 +1,4 @@
+#include "competition.hpp"
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_sdlrenderer2.h"
 #include "liblvgl/lvgl.h"
@@ -86,6 +87,7 @@ int main() {
 	bool should_exit = false;
 
 	std::thread lvgl_thread(lvgl_task);
+	std::thread comp_thread(comp_task);
 
 	while (!should_exit) {
 		// Handle SDL events
@@ -105,6 +107,7 @@ int main() {
 
 		// Show windows
 		show_lvgl_window();
+		show_competition_window();
 
 		// Render window
 		ImGui::Render();
