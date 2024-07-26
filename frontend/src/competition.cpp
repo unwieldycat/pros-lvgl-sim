@@ -9,7 +9,7 @@ std::thread *comp_thread;
 void comp_task() {
 	using namespace std::chrono_literals;
 
-	int prev_mode = comp_mode;
+	int prev_mode = -1;
 
 	initialize(); // TODO: Make this behave more like how PROS does it
 	competition_initialize();
@@ -18,10 +18,13 @@ void comp_task() {
 		if (prev_mode != comp_mode) {
 			switch (comp_mode) {
 			case 0:
+				_sim::set_comp_mode(_sim::CompetitionMode::Disabled);
 				disabled();
 			case 1:
+				_sim::set_comp_mode(_sim::CompetitionMode::Driver);
 				opcontrol();
 			case 2:
+				_sim::set_comp_mode(_sim::CompetitionMode::Autonomous);
 				autonomous();
 			}
 
