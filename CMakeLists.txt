@@ -7,5 +7,5 @@ set(CMAKE_CXX_STANDARD 20)
 project(pros-lvgl-sim)
 
 add_subdirectory(frontend)
-add_subdirectory(simulator)
+add_subdirectory(library)
 add_subdirectory(user)
