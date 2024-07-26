@@ -16,7 +16,6 @@ void comp_task() {
 
 	while (true) {
 		if (prev_mode != comp_mode) {
-			std::cout << "switch\n";
 			switch (comp_mode) {
 			case 0:
 				disabled();
