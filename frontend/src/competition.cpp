@@ -20,12 +20,15 @@ void comp_task() {
 			case 0:
 				_sim::set_comp_mode(_sim::CompetitionMode::Disabled);
 				disabled();
+				break;
 			case 1:
 				_sim::set_comp_mode(_sim::CompetitionMode::Driver);
 				opcontrol();
+				break;
 			case 2:
 				_sim::set_comp_mode(_sim::CompetitionMode::Autonomous);
 				autonomous();
+				break;
 			}
 
 			prev_mode = comp_mode;
