@@ -1,5 +1,4 @@
 #include "userfns.hpp"
-#include <iostream>
 
 __attribute__((weak)) void autonomous(void) {}
 __attribute__((weak)) void initialize(void) {}
