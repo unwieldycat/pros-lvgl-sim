@@ -86,6 +86,7 @@ void init_lvgl() {
 	// Create screen object
 	lv_obj_t *scr = lv_obj_create(NULL);
 	lv_obj_set_size(scr, LV_HOR_RES_MAX, LV_VER_RES_MAX);
+	lv_obj_set_style_bg_color(scr, lv_color_hex3(0x000), 0);
 	lv_scr_load(scr);
 }
 
