@@ -1,5 +1,3 @@
-// FIXME: LVGL can only live in one thread. Figure out how to make everything single threaded
-
 #include "competition.hpp"
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_sdlrenderer2.h"

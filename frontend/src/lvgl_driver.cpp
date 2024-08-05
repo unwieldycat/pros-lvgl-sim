@@ -33,7 +33,7 @@ void disp_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_t *colo
 	rect.y = area->y1;
 	rect.w = width + 1;
 	rect.h = height + 1;
-	SDL_UpdateTexture(texture, &rect, color_p, 480 * 4);
+	SDL_UpdateTexture(texture, &rect, color_p, (width + 1) * 4);
 
 	lv_disp_flush_ready(disp_drv);
 }
