@@ -3,7 +3,11 @@
     "sdl2",
     {
       "name": "imgui",
-      "features": ["sdl2-binding", "sdl2-renderer-binding"]
+      "features": [
+        "sdl2-binding",
+        "sdl2-renderer-binding",
+        "docking-experimental"
+      ]
     }
   ]
 }
