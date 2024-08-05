@@ -1,6 +1,7 @@
 #include "competition.hpp"
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_sdlrenderer2.h"
+#include "imgui_internal.h"
 #include "liblvgl/lvgl.h"
 #include "lvgl_driver.hpp"
 #include <SDL.h>
@@ -88,6 +89,7 @@ int main() {
 	using namespace std::chrono_literals;
 
 	bool should_exit = false;
+	bool first_loop = true;
 
 	std::thread lvgl_thread(lvgl_task);
 	std::thread comp_thread(comp_task);
@@ -107,7 +109,30 @@ int main() {
 		ImGui_ImplSDLRenderer2_NewFrame();
 		ImGui_ImplSDL2_NewFrame();
 		ImGui::NewFrame();
-		ImGui::DockSpaceOverViewport();
+
+		// Setup docking
+		if (first_loop) {
+			// Create main dock space
+			ImGuiID space_id = ImGui::GetID("Main Dock");
+			ImGui::DockBuilderRemoveNode(space_id); // Clear previous node
+			ImGui::DockBuilderAddNode(
+			    space_id, ImGuiDockNodeFlags_PassthruCentralNode || ImGuiDockNodeFlags_DockSpace
+			);
+			ImGui::DockBuilderSetNodeSize(space_id, ImGui::GetMainViewport()->Size);
+
+			// Create dock splits
+			ImGuiID disp_dock =
+			    ImGui::DockBuilderSplitNode(space_id, ImGuiDir_Up, 0.75f, nullptr, &space_id);
+			ImGuiID bottom_dock =
+			    ImGui::DockBuilderSplitNode(space_id, ImGuiDir_Down, 0.25f, nullptr, &space_id);
+
+			// Add windows
+			ImGui::DockBuilderDockWindow("Brain Screen", disp_dock);
+			ImGui::DockBuilderDockWindow("Competition Switch", bottom_dock);
+
+			ImGui::DockBuilderFinish(space_id);
+			first_loop = false;
+		}
 
 		// Show windows
 		show_lvgl_window();
