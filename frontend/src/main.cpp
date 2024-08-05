@@ -59,6 +59,7 @@ void init_imgui() {
 	io = &ImGui::GetIO();
 	io->ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard; // Enable Keyboard Controls
 	io->ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;  // Enable Gamepad Controls
+	io->ConfigFlags |= ImGuiConfigFlags_DockingEnable;
 
 	ImGui_ImplSDL2_InitForSDLRenderer(window, renderer);
 	ImGui_ImplSDLRenderer2_Init(renderer);
@@ -104,6 +105,7 @@ int main() {
 		ImGui_ImplSDLRenderer2_NewFrame();
 		ImGui_ImplSDL2_NewFrame();
 		ImGui::NewFrame();
+		ImGui::DockSpaceOverViewport();
 
 		// Show windows
 		show_lvgl_window();
