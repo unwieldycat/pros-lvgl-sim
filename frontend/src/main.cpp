@@ -85,6 +85,8 @@ __attribute__((destructor)) void deinit() {
 }
 
 int main() {
+	using namespace std::chrono_literals;
+
 	bool should_exit = false;
 
 	std::thread lvgl_thread(lvgl_task);
@@ -121,6 +123,9 @@ int main() {
 		SDL_RenderClear(renderer);
 		ImGui_ImplSDLRenderer2_RenderDrawData(ImGui::GetDrawData());
 		SDL_RenderPresent(renderer);
+
+		// Sleep to not hog CPU time
+		std::this_thread::sleep_for(2ms);
 	}
 
 	return 0;
