@@ -91,7 +91,7 @@ void init_lvgl() {
 }
 
 void show_lvgl_window() {
-	ImGui::Begin("Brain Screen", NULL, ImGuiWindowFlags_NoResize);
+	ImGui::Begin("Brain Screen", NULL);
 	ImGui::Image((void *)texture, {480, 240});
 
 	if (ImGui::IsItemHovered()) {
