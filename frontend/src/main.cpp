@@ -110,14 +110,13 @@ int main() {
 		ImGui_ImplSDL2_NewFrame();
 		ImGui::NewFrame();
 
+		ImGuiID space_id = ImGui::DockSpaceOverViewport(ImGui::GetMainViewport());
+
 		// Setup docking
 		if (first_loop) {
 			// Create main dock space
-			ImGuiID space_id = ImGui::GetID("Main Dock");
 			ImGui::DockBuilderRemoveNode(space_id); // Clear previous node
-			ImGui::DockBuilderAddNode(
-			    space_id, ImGuiDockNodeFlags_PassthruCentralNode || ImGuiDockNodeFlags_DockSpace
-			);
+			ImGui::DockBuilderAddNode(space_id, ImGuiDockNodeFlags_PassthruCentralNode);
 			ImGui::DockBuilderSetNodeSize(space_id, ImGui::GetMainViewport()->Size);
 
 			// Create dock splits
