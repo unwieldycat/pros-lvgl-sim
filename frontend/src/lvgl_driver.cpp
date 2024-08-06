@@ -92,6 +92,13 @@ void init_lvgl() {
 
 void show_lvgl_window() {
 	ImGui::Begin("Brain Screen", NULL);
+
+	ImVec2 window_size = ImGui::GetWindowSize();
+	ImGui::SetCursorPos({
+	    (window_size.x / 2) - 240,
+	    (window_size.y / 2) - 120,
+	});
+
 	ImGui::Image((void *)texture, {480, 240});
 
 	if (ImGui::IsItemHovered()) {
